@@ -1,80 +1,331 @@
-
+<!--http://www.roboterwelt.de/suche/filter?filter=1&term=&used=&minp=&maxp=&term=&sort=sort_ratings-->
 <!DOCTYPE html>
-<html lang="en" >
-<head>   
-  <title>Portfolio Page</title>
-  <meta charset="utf-8">
-  <meta name="description" content="Foluwa's Personal portfolio website">
-  <meta name="keywords" content="Hire, Freelance, HTML, CSS, Freecodecamp">
-  <meta name="author" content="Foluwa Akintola Moronfoluwa">
-  <meta name="viewport" content="width=device-width" />
-  <!--Social media button-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!--Typewriter effect-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  
-  <link rel="stylesheet" href="Styles/style.css">
-    <!--bootstrap-->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  -->
-</head>
-<body>
-    <nav class="row navbar navbar-expand-md bg-dark navbar-dark fixed-top" >
-       
-      
-    <div class="col-sm-4 col-sm-push-8 bg-dark">
-      <a href="index.html" class="myLogo"><b>&lt; &#x2215;&gt;</b></a> <!-- class="nav-link" -->
-    </div>
-    <div class="col-sm-8 col-sm-pull-4 bg-dark">
-      <ul style="display:flex;float:right; padding-top: 7px;list-style-type: none">
-                  <li class="nav-item">
-                    <a class="nav-link mynavLinks" href="Views/About.html"> About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link mynavLinks" href="Views/Portfolio.html"> Portfolio</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link mynavLinks" href="Views/Contact.html"> Contact</a>
-                  </li>
-          </ul>
-    </div>
-  </nav>
+  <html lang="en">
+    <head>
+      <meta name="description" content="Foluwa's portfolio page">
+      <meta name="keywords" content="Hire, Freelance, HTML, CSS, Freecodecamp">
+      <meta name="author" content="Foluwa Akintola Moronfoluwa">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+      <link rel="shortcut icon" type="image/ico" href="icon.ico"/>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <title>Foluwa's portfolio page</title>
+      <style>
+              * {
+                  box-sizing: border-box;
+              }
 
 
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="typewriter" style="margin-top:90px">
-                    <h1 style="color:rgb(159, 195, 228);">Hi I am Foluwa, a web Developer.</h1>
-                </div>
+              /* Center website */
+              .main {
+                 /* max-width: 1000px;*/
+                  margin: auto;
+              }
+
+              h1 {
+                  font-size: 50px;
+                  word-break: break-all;
+              }
+
+              .row {
+                  margin: 10px -16px;
+              }
+
+              /* Add padding BETWEEN each column */
+              .row,
+              .row > .column-div {
+                  padding: 8px;
+              }
+
+              /* Create three equal columns that floats next to each other */
+              .column-div {
+                  float: left;
+                  width: 33.33%;
+                  display: none; /* Hide all elements by default */
+              }
+
+              /* Clear floats after rows */ 
+              .row:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+              }
+
+              /* Content */
+              
+
+              /* The "show" class is added to the filtered elements */
+              .show {
+                display: block;
+              }
+
+              /* Style the buttons */
+              .btn {
+                border: none;
+                outline: none;
+                padding: 12px 16px;
+                background-color: white;
+                cursor: pointer;
+              }
+
+              .btn:hover {
+                background-color: #ddd;
+              }
+
+              .btn.active {
+                background-color: #666;
+                color: white;
+              }
+              /* CONTACT */
+              .flex-container {
+                display: flex;
+                flex-wrap: wrap;
+                background: linear-gradient(to bottom right,#06363C, #d78de0);
+              }
+
+              .flex-container > div {
+                background-color: #f1f1f1;
+                width: 85px;
+                margin: 10px;
+                text-align: center;
+                line-height: 75px;
+                font-size: 30px;
+              }
+              .flex-container > i {
+                font-size: 70px;
+              }
+              #navbar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+              }
+              .flex-container a:hover {
+                font-size:150%;
+              }
+              .mymail a:hover{
+                font-size: 150%;
+              }
+              i {
+                padding-top: 20px;
+                padding-bottom: 20px;
+              }
+              .btn{
+                color: #0000ff;
+              }
+              /*Type writer effect */
+              .typewriter h2 {
+                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                border-right: .15em solid orange; /* The typwriter cursor */
+                white-space: nowrap; /* Keeps the content on a single line */
+                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                letter-spacing: .15em; /* Adjust as needed */
+                animation: 
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+              }
+
+              /* The typing effect */
+              @keyframes typing {
+                from { width: 0 }
+                to { width: 100% }
+              }
+
+              /* The typewriter cursor effect */
+              @keyframes blink-caret {
+                from, to { border-color: transparent }
+                50% { border-color:#ffffff; }/*orange*/
+              }
+              #monk {
+                font-size: 30px;
+              }
+</style>
+    </head>
+
+    <body class="container-fluid" style="padding:0px;min-width:100%;">
+        <nav id="navbar" class="navbar-fixed blue-grey darken-4" style="width:100%;">
+          <div class="nav-wrapper">
+            <a href="#home" id="logo-nav" class="brand-logo"><div id="monk">{FOLUWA}</div/></a> <!--&lt;/&gt; -->
+            <ul id="nav-mobile" class="right hide-on-med-and-down list-nav">
+              <li><a href="#home" class="waves-effect active list-nav">Home</a></li>
+              <li><a href="#portfolio" class="waves-effect list-nav">Portfolio</a></li>
+              <li><a href="#contact" class="waves-effect list-nav">Contact</a></li>
+            </ul>
+          </div>
+        </nav><br>
+
+          <div id="home" class="container-fluid" style="height:600px;;width:100%; background:#f00; margin-top:0;
+             background-image:url(images/bg.jpg);background-size:100%;background-repeat: no-repeat;color:white;margin-top:40px;">
+            <div class="typewriter row row-full" >
+              <h2>Hi I am Foluwa, a FullStack Web developer</h2>
             </div>
-      </div>
-    </div>
+          </div>
 
-    <footer class="container fixed-bottom" style="background-color: transparent;">
-      <div style="text-align:center;">
-        <a href="https://twitter.com/fantasticfoluwa" class="fa fa-twitter" style="font-size: 20px"></a>
-        <a href="https://www.instagram.com/fantastic_foluwa/" class="fa fa-instagram" style="font-size: 20px"></a>
-        <a href="#" class="fa fa-github" style="font-size: 20px"></a>
-        <b>2018</b>
-      </div>
-    </footer>
-  
-</body>
-</html>
-<!--
-  http://fizzed.com/oss/font-mfizz
-    https://codepen.io/geoffgraham/pen/jrWwWM?editors=1100
-    http://freefrontend.com/css-text-effects/#typing-text
-    http://freefrontend.com/css-text-effects/
-    http://www.tutorialsteacher.com/jquery/start-using-jquery
--->
-<!--https://medium.freecodecamp.org/15-web-developer-portfolios-to-inspire-you-137fb1743cae 
-          https://learntocodewith.me/posts/portfolio-tips/  
-        -->
+          <div id="portfolio" class="container-fluid" style="background-color: white;" > 
+            <h1 class="center-align" style="color:#ffffff;">Portfolio</h1>
+              <h4 class=""></h4>
+                <div>
+                  <div class="main">
+                    <div id="myBtnContainer">
+                      <button class="btn btn-primary" onclick="filterSelection('div-all')"> Display all</button> <!--btn active -->
+                      <button class="btn btn-primary" onclick="filterSelection('Web')"> Web</button>
+                      <button class="btn btn-primary" onclick="filterSelection('Desktop')"> Desktop</button>
+                      <button class="btn btn-primary" onclick="filterSelection('Cert')"> Certifications</button>
+                    </div>
+
+                <!-- Portfolio Gallery Grid -->
+                <div class="row">
+                  <div class="column-div Web">
+                    <div class="content">
+                      <img src="images/projects/todo.PNG" alt="Mountains" style="width:100%;height:280px;">
+                      <h4>HTML&CSS,JAVASCRIPT</h4>
+                      <p>Atodo App with HTML and JAVASCRIPT</p>
+                    </div>
+                  </div>  
+                  <div class="column-div Desktop">
+                    <div class="content">
+                      <img src="images/projects/CSharpCalculator.PNG" alt="Calculator With Windows Form Application" style="width:100%;height:280px;">
+                      <h4>Windows Form Application(C#)</h4>
+                      <p>Calculator With Windows Form Application</p>
+                    </div>
+                  </div>
+                  <div class="column-div Desktop">
+                    <div class="content">
+                    <img src="images/projects/ArrayOperations.PNG" alt="Reverse and Sort Implementation on Arrays" style="width:100%;height:280px;">
+                      <h4>Windows Form Application(C#)</h4>
+                      <p>Reverse and Sort Implementation on Arrays</p>
+                    </div>
+                  </div>
+                  <div class="column-div Desktop">
+                    <div class="content">
+                    <img src="images/projects/download.png" alt="Car" style="width:100%;height:280px;" >
+                      <h4>Audio and Video Player with Electron</h4>
+                      <p>In Progress</p>
+                    </div>
+                  </div>
+                  <div class="column-div Desktop">
+                    <div class="content">
+                    <img src="images/projects/ArrayOperations.PNG" alt="Reverse and Sort Implementation on Arrays" style="width:100%;height:280px;">
+                      <h4>Windows Form Application(C#)</h4>
+                      <p>Reverse and Sort Implementation on Arrays</p>
+                    </div>
+                  </div>
+
+                  <div class="column-div Cert">
+                    <div class="content">
+                      <img src="images/certs/ALCwithGcert.PNG" alt="Google Andela Certificate" style="width:100%;height:280px;">
+                      <h4>Google</h4>
+                      <p>Andela with Google certificate</p>
+                    </div>
+                  </div>
+                  <div class="column-div Cert">
+                    <div class="content">
+                    <img src="images/certs/ALCwithMcert.PNG" alt="Microsoft Andela Certificate" style="width:100%;height:280px;">
+                      <h4>Microsoft</h4>
+                      <p>Andela with Microsoft certificate</p>
+                    </div>
+                  </div>
+                  <div class="column-div Cert">
+                    <div class="content">
+                    <img src="images/certs/SoloLearnJS.jpg" alt="Sololearn JavaScript Certificate" style="width:100%;height:280px;">
+                      <h4>Sololearn</h4>
+                      <p>JAVASCRIPT SoloLearn Certificate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+                </div> 
+          </div>
+
+          <div id="contact">
+                         
+             <div class="flex-container">
+              <h1 class="center-align container-fluid" style="color:#ffffff;text-align: center;">My Contact</h1> 
+                <div style="width:1000%;"> 
+                    <div class="card-image">
+                      <img src="images/foludp.jpg" class="circle responsive-img" style="width:300px; height:300px; border-radius:50%;">
+                    </div>
+                      <div>Mail me at <span><a href="" class="mymail"><i class="fas fa-envelope"></i></a></span></div>  
+                        <div class="row">           
+                            <div class="col-sm-12">
+                                <div class="flex-container" style="justify-content:center;">
+                                      <div><a href="https://github.com/Foluwa"><i class="fab fa-github"></i></a></div>
+                                      <div><a href="https://www.freecodecamp.org/moronfoluwa"><i class="fab fa-free-code-camp"></a></i></div>
+                                      <div style="background-color:#ffffff;"><a href="https://www.facebook.com/akintola.moronfoluwar"><i class="fab fa-facebook"></i></a></div>
+                                      <div style="background-color:#ffffff;"><a href="https://twitter.com/fantasticfoluwa"><i class="fab fa-twitter"></i></a></div>
+                                      <div style="background-color:#ffffff;"><a href="https://www.instagram.com/fantastic_foluwa"><i class="fab fa-instagram"></i></a></div>  
+                                      <div style="background-color:#ffffff;"><a href="https://www.linkedin.com/in/moronfoluwa-emmanuel-30b391123/"><i class="fab fa-linkedin"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                </div> 
+             </div> 
+          </div>
+
+          <footer class="page-footer blue-grey darken-4">
+          <div class="footer-copyright">
+            <div class="container">
+                2018 Copyright Foluwa
+                <a href="https://www.facebook.com/akintola.moronfoluwar"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/fantasticfoluwa"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/fantastic_foluwa"><i class="fab fa-instagram"></i></a>
+                  <hr />
+            </div>
+          </div>
+        </footer>
+        </div>
+
+      <script type="text/javascript">
+              filterSelection("div-all")
+              function filterSelection(c) {
+                var x, i;
+                x = document.getElementsByClassName("column-div");
+                if (c == "div-all") c = "";
+                for (i = 0; i < x.length; i++) {
+                  w3RemoveClass(x[i], "show");
+                  if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                }
+              }
+
+              function w3AddClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                  if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+                }
+              }
+
+              function w3RemoveClass(element, name) {
+                var i, arr1, arr2;
+                arr1 = element.className.split(" ");
+                arr2 = name.split(" ");
+                for (i = 0; i < arr2.length; i++) {
+                  while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);     
+                  }
+                }
+                element.className = arr1.join(" ");
+              }
+
+              // Add active class to the current button (highlight it)
+              var btnContainer = document.getElementById("myBtnContainer");
+              var btns = btnContainer.getElementsByClassName("btn");
+              for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener("click", function(){
+                  var current = document.getElementsByClassName("active");
+                  current[0].className = current[0].className.replace(" active", "");
+                  this.className += " active";
+                });
+              }
+      </script>        
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/jquery.min.js"></script>
+      <script type="text/javascript" src="js/fontawesome-all.js"></script>
+    </body>
+  </html>   
