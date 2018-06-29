@@ -9,28 +9,30 @@
     <!-- custom css -->
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" type="text/css" href="public/css/materialize.mincss">
+    <script type="text/javascript" src="public/js/materialize.minjs"></script>
 
     <title>Currency Converter</title>
   </head>
   <body>
     <h2>Andela Learning Community Project for Google scholarship</h2>
             <form id="currency-form">
-                <div>
-                  <h5>My Currency Converter for ALC 3.0</h5>
-                  <label for="current_amount">Amount:</label>
-                  <input type="text" id="current_amount"> <!-- value="1" -->
-                  <small>Enter the amount.</small>
-                  <label for="current_currency">Currency</label>
-                  <select id="current_currency" class="form-control"></select>
+                <div class="input-field col s12">
+                  <h5>Current Currency</h5>
+                    <label for="current_amount">Amount:</label>
+                    <input type="text" id="current_amount">
+                    <small>Enter the amount.</small>
+                    <select id="current_currency" class="form-control"></select>
+                    <label for="current_currency">Currency</label>
                 </div>
                 
-                <div>
+                <div class="input-field col s12">
                     <h5>Equivalent Currency</h5>
                     <label for="equivalent_amount">Amount:</label>
                     <input type="text" id="equivalent_amount" placeholder="pending" readonly>
                     <small>Amount equivalence</small>
-                    <label for="equivalent_currency">Currency</label>
                     <select id="equivalent_currency"></select>
+                    <label for="equivalent_currency">Multiple Select</label>
                 </div>
                 <button type="submit">Convert</button>
             </form>
