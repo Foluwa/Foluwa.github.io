@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Currency converter app built in ALC 3.0 program.">
+    <!-- custom css -->
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="manifest" href="manifest.json">
+
+    <title>Currency Converter</title>
+  </head>
+  <body>
+    <h2>Andela Learning Community Project for Google scholarship</h2>
+            <form id="currency-form">
+                <div>
+                  <h5>My Currency Converter for ALC 3.0</h5>
+                  <label for="current_amount">Amount:</label>
+                  <input type="text" id="current_amount"> <!-- value="1" -->
+                  <small>Enter the amount.</small>
+                  <label for="current_currency">Currency</label>
+                  <select id="current_currency" class="form-control"></select>
+                </div>
+                
+                <div>
+                    <h5>Equivalent Currency</h5>
+                    <label for="equivalent_amount">Amount:</label>
+                    <input type="text" id="equivalent_amount" placeholder="pending" readonly>
+                    <small>Amount equivalence</small>
+                    <label for="equivalent_currency">Currency</label>
+                    <select id="equivalent_currency"></select>
+                </div>
+                <button type="submit">Convert</button>
+            </form>
+    <!--JavaScript -->
+    <script type="text/javascript" src="public/js/app.js"></script>
+    <script type="text/javascript" src="public/js/sw/sw.js"></script>
+  </body>
+</html>
