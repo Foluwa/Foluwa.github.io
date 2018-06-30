@@ -10,32 +10,62 @@
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" type="text/css" href="public/css/materialize.mincss">
+    <style type="text/css">
+        .flex-container {
+          display: flex;
+          flex-direction: column;
+          background-color: #0ff;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .flex-container > div {
+          background-color: #00f;
+          width: 40%;
+          margin: 10px;
+          line-height: 66px;
+          font-size: 30px;
+        }
+    </style>
     <script type="text/javascript" src="public/js/materialize.minjs"></script>
 
     <title>Currency Converter</title>
   </head>
   <body>
-    <h2>Andela Learning Community Project for Google scholarship</h2>
+    <div class="flex-container">
+        <div border="5px">
+          <small>Andela Learning Community Project for Google</small>
             <form id="currency-form">
                 <div class="input-field col s12">
-                  <h5>Current Currency</h5>
-                    <label for="current_amount">Amount:</label>
+                  <div>Current Currency</div>
+                    <label for="current_amount">
+                        <small>Enter the amount</small>
+                    </label>
                     <input type="text" id="current_amount">
-                    <small>Enter the amount.</small>
+                    <label for="current_currency">
+                        <small>Currency</small>
+                    </label>
                     <select id="current_currency" class="form-control"></select>
-                    <label for="current_currency">Currency</label>
                 </div>
-                
+                <hr>
                 <div class="input-field col s12">
-                    <h5>Equivalent Currency</h5>
-                    <label for="equivalent_amount">Amount:</label>
+                    <div>Equivalent Currency</div>
+                    <label for="equivalent_amount">
+                        <small>Equivalent Amount</small>
+                    </label>
                     <input type="text" id="equivalent_amount" placeholder="pending" readonly>
-                    <small>Amount equivalence</small>
+                    <label for="equivalent_currency">
+                        <small>Currency</small>
+                    </label>
                     <select id="equivalent_currency"></select>
-                    <label for="equivalent_currency">Multiple Select</label>
                 </div>
                 <button type="submit">Convert</button>
             </form>
+            <div style="background-color: yellow">
+                HELLO WORLD
+            </div>
+        </div>
+    </div>
     <!--JavaScript -->
     <script type="text/javascript" src="public/js/app.js"></script>
     <script type="text/javascript" src="public/js/sw/sw.js"></script>
