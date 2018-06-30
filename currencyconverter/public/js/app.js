@@ -29,7 +29,7 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies')
         console.log('Encountered an error .', err);
     })
 
-
+//CONSUMING THE API
 const form_element = document.getElementById('currency-form');
 form_element.addEventListener('submit', event => {
   event.preventDefault();
@@ -54,7 +54,7 @@ form_element.addEventListener('submit', event => {
     })
 });
 
-//SERVICE WORKER
+//REGISTRING SERVICE WORKER
   if ('serviceWorker' in navigator) {
        navigator.serviceWorker.register('https://foluwa.github.io/currencyconverter/public/js/sw.js').then((registration) => {
         console.log('Registration successful, scope is:', registration.scope);
@@ -64,22 +64,13 @@ form_element.addEventListener('submit', event => {
        });
 
   }
-
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// IndexedDb initialization
-//let idb = 'https://foluwa.github.io/currencyconverter/public/js/sw.js';
-//GETTING IDB
-//import idb from 'idb.js';
 //// CHECKING IF INDEXEDDB IS SUPPORTED
 if (!window.indexedDB) {
-    window.alert('Your browser does not support a stable version of IndexedDB');
+    window.alert('Your browser does not support a stable version of IndexedDB.');
 }
 else {
-  console.log("Your browser supports IndexedDB");
+  console.log("Your browser supports IndexedDB.");
 }
-
-
 const dbPromise = indexedDB.open('currencyConverter', 3, (upgradeDb) => {
     switch (upgradeDb.oldVersion) {
         case 0:
@@ -98,12 +89,9 @@ const dbPromise = indexedDB.open('currencyConverter', 3, (upgradeDb) => {
             ratesStore.createIndex('rates', 'query');
     }
 });
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    /*
-     Fetch Countries 
-      */
+    
+    //FETCHING CURRENCIES
     fetch('https://free.currencyconverterapi.com/api/v5/countries')
         .then(res => res.json())
         .then(res => {
@@ -117,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const countries = db.transaction('countries', 'readwrite').objectStore('countries');
                 const countriesIndex = countries.index('country');
                 countriesIndex.getAll().then(currencies => {
-                    // fetchCountries(currencies);
+                    //
                 })
             })
         }).catch(() => {
@@ -125,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const countries = db.transaction('countries').objectStore('countries');
                 const countriesIndex = countries.index('country');
                 countriesIndex.getAll().then(currencies => {
-                    // fetchCountries(currencies);
+                    // 
                 })
 
             });

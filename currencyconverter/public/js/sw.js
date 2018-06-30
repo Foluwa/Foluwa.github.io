@@ -17,7 +17,6 @@ var preLoad = function(){
      'popper.min.js',
      'bootstrap.bundle.min.js',
      '../converter.html',
-    
     ]);
   });
 }

@@ -1,6 +1,5 @@
-'use strict';
 
-console.log("This is IDBIndex");
+'use strict';
 
 (function() {
   function toArray(arr) {
@@ -12,7 +11,6 @@ console.log("This is IDBIndex");
       request.onsuccess = function() {
         resolve(request.result);
       };
-
       request.onerror = function() {
         reject(request.error);
       };
@@ -25,7 +23,6 @@ console.log("This is IDBIndex");
       request = obj[method].apply(obj, args);
       promisifyRequest(request).then(resolve, reject);
     });
-
     p.request = request;
     return p;
   }
@@ -82,46 +79,26 @@ console.log("This is IDBIndex");
     this._index = index;
   }
 
-  proxyProperties(Index, '_index', [
-    'name',
-    'keyPath',
-    'multiEntry',
-    'unique'
-  ]);
+  proxyProperties(Index, '_index', ['name','keyPath','multiEntry','unique']);
 
   proxyRequestMethods(Index, '_index', IDBIndex, [
-    'get',
-    'getKey',
-    'getAll',
-    'getAllKeys',
-    'count'
-  ]);
+    'get','getKey','getAll','getAllKeys','count']);
 
-  proxyCursorRequestMethods(Index, '_index', IDBIndex, [
-    'openCursor',
-    'openKeyCursor'
-  ]);
+  proxyCursorRequestMethods(Index, '_index', IDBIndex, ['openCursor','openKeyCursor']);
 
   function Cursor(cursor, request) {
     this._cursor = cursor;
     this._request = request;
   }
 
-  proxyProperties(Cursor, '_cursor', [
-    'direction',
-    'key',
-    'primaryKey',
-    'value'
-  ]);
+  proxyProperties(Cursor, '_cursor', ['direction','key','primaryKey','value']);
 
-  proxyRequestMethods(Cursor, '_cursor', IDBCursor, [
-    'update',
-    'delete'
-  ]);
-
+  proxyRequestMethods(Cursor, '_cursor', IDBCursor, ['update','delete']);
   // proxy 'next' methods
   ['advance', 'continue', 'continuePrimaryKey'].forEach(function(methodName) {
-    if (!(methodName in IDBCursor.prototype)) return;
+    
+    if (!(methodName in IDBCursor.prototype)) 
+      return;
     Cursor.prototype[methodName] = function() {
       var cursor = this;
       var args = arguments;
@@ -167,8 +144,7 @@ console.log("This is IDBIndex");
   ]);
 
   proxyCursorRequestMethods(ObjectStore, '_store', IDBObjectStore, [
-    'openCursor',
-    'openKeyCursor'
+    'openCursor','openKeyCursor'
   ]);
 
   proxyMethods(ObjectStore, '_store', IDBObjectStore, [
@@ -195,8 +171,7 @@ console.log("This is IDBIndex");
   };
 
   proxyProperties(Transaction, '_tx', [
-    'objectStoreNames',
-    'mode'
+    'objectStoreNames','mode'
   ]);
 
   proxyMethods(Transaction, '_tx', IDBTransaction, [
@@ -214,14 +189,11 @@ console.log("This is IDBIndex");
   };
 
   proxyProperties(UpgradeDB, '_db', [
-    'name',
-    'version',
-    'objectStoreNames'
+    'name','version','objectStoreNames'
   ]);
 
   proxyMethods(UpgradeDB, '_db', IDBDatabase, [
-    'deleteObjectStore',
-    'close'
+    'deleteObjectStore','close'
   ]);
 
   function DB(db) {
@@ -233,9 +205,7 @@ console.log("This is IDBIndex");
   };
 
   proxyProperties(DB, '_db', [
-    'name',
-    'version',
-    'objectStoreNames'
+    'name','version','objectStoreNames'
   ]);
 
   proxyMethods(DB, '_db', IDBDatabase, [

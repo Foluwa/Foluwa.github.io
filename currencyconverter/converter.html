@@ -14,30 +14,34 @@
     * {
         padding: 5px;
     }
+
     body {
         font-family: Montserrat,'Open Sans',serif;
 
-        }
+    }
+
     .fa {
         font-size: 50px;
         padding-left: 50px
-        }
-        .flex-container {
-          display: flex;
-          flex-direction: column;
-          background-color: #0ff;
-          align-items: center;
-          justify-content: center;
-        }
+    }
 
-        .flex-container > div {
-          background-color: #fff;
-          width: 40%;
-          margin: 10px;
-          line-height: 30px;
-        }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #0ff;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .flex-container > div {
+        background-color: #fff;
+        width: 40%;
+        margin: 10px;
+        line-height: 30px;
+    }
+
     .btn {
-          margin-top: 20px;
+        margin-top: 20px;
     }
     </style>
     <title>Currency Converter - #7DaysofCodeChallenge</title>
@@ -45,8 +49,9 @@
   <body>
     <div class="flex-container">
         <div>
-          <strong class="text-center">ALC #7DaysofCodeChallenge</strong>
+          <div><strong class="text-center">ALC #7DaysofCodeChallenge</strong></div>
             <form id="currency-form">
+                
                 <div class="input-field col s12">
                   <div><strong>Current Currency</strong></div>
                     <label for="current_amount">
@@ -78,7 +83,7 @@
             </div>
         </div>
     </div>
-    <!-- JAVASCRIPT -->
+    <!-- JAVASCRIPT LINKS -->
     <script type="text/javascript" src="public/js/app.js"></script>
     <script type="text/javascript" src="public/js/jquery.min.js"></script>
     <script type="text/javascript" src="public/js/popper.min.js"></script>
