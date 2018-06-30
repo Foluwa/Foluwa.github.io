@@ -1,5 +1,5 @@
 
-const Mycache = 'kim-currency-conv-v1';
+const myCache = 'currency-conv-v1';
 
 ////FOR MY STATIC FILES
 var filesToCache = [
@@ -14,7 +14,7 @@ var filesToCache = [
   
 self.addEventListener('install', event => {
     event.waitUntil(
-        caches.open(Mycache).then( cache => {
+        caches.open(myCache).then( cache => {
             return cache.addAll(filesToCache);
         })
     );

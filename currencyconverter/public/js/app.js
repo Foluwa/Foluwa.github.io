@@ -1,4 +1,12 @@
-console.log("FOLUWA IS HERE");
+//// CHECKING IF INDEXEDDB IS SUPPORTED
+if (!window.indexedDB) {
+    window.alert("Your browser doesn't support a stable version of IndexedDB. Such and such feature will not be available.");
+}
+else {
+  console.log("IndexedDB is supported");
+}
+
+
 // TO GET ALL THE CURRENCIES AVAILABLR
 fetch('https://free.currencyconverterapi.com/api/v5/currencies')
     .then(response=> {
