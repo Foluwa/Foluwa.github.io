@@ -76,7 +76,8 @@ form_element.addEventListener('submit', event => {
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // IndexedDb initialization
-let idb = 'https://foluwa.github.io/currencyconverter/public/js/sw.js';
+//let idb = 'https://foluwa.github.io/currencyconverter/public/js/sw.js';
+import { idb } from 'idb.js';
 
 const dbPromise = idb.open('currencyConverter', 3, (upgradeDb) => {
     switch (upgradeDb.oldVersion) {
