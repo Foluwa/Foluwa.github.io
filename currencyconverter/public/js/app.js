@@ -43,23 +43,6 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies')
     })
 
 
-
-    //REGISTER SERVICE WORKER
-    if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-      .register('sw.js') //'/sw/sw.js'
-      .then(reg => console.log('Registration successful'))
-      .catch(() => console.log('Registration failed'));
-  }
-  /*
-  // open an idb
-  dbPromise = idb.open('currenciesDB', 1, upgradeDB => {
-    upgradeDB.createObjectStore('rates', { keyPath: 'id' });
-  });
-}); */
-////////////////////////////////////////////////////////
-
-
 const form_element = document.getElementById('currency-form');
 form_element.addEventListener('submit', event => {
   event.preventDefault();
@@ -86,3 +69,43 @@ form_element.addEventListener('submit', event => {
         document.getElementById('equivalent_amount').value = converted_Value;
     })
 });
+
+
+
+
+
+
+
+
+
+//SERVICE WORKER
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/public/js/sw.js').then(function(registration) {
+      console.log('Registration successful, scope is:', registration.scope);
+    })
+    .catch(function(error) {
+      console.log('Service worker registration failed, error:', error);
+    });
+  }
+
+
+
+
+ //   BEGINING WITH SERVICE WORKER
+
+//REGISTER SERVICE WORKER
+/*
+    if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js') //'/sw/sw.js'
+      .then(reg => console.log('Registration successful'))
+      .catch(() => console.log('Registration failed'));
+  }
+  */
+  /*
+  // open an idb
+  dbPromise = idb.open('currenciesDB', 1, upgradeDB => {
+    upgradeDB.createObjectStore('rates', { keyPath: 'id' });
+  });
+}); */
+////////////////////////////////////////////////////////

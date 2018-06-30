@@ -1,16 +1,27 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
+    <!-- META TAGS -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Currency converter app built in ALC 3.0 program.">
-    <!-- custom css -->
-    <link rel="stylesheet" href="public/css/style.css">
-    <link rel="manifest" href="manifest.json">
-   <!-- <link rel="stylesheet" type="text/css" href="public/css/materialize.mincss"> -->
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- INTERNAL STYLES -->
     <style type="text/css">
+    @import url("https://fonts.googleapis.com/css?family=Montserrat");
+    * {
+        padding: 5px;
+    }
+    body {
+        font-family: Montserrat,'Open Sans',serif;
+
+        }
+    .fa {
+        font-size: 50px;
+        padding-left: 50px
+        }
         .flex-container {
           display: flex;
           flex-direction: column;
@@ -20,54 +31,61 @@
         }
 
         .flex-container > div {
-          background-color: #00f;
+          background-color: #fff;
           width: 40%;
           margin: 10px;
-          line-height: 66px;
-          font-size: 30px;
+          line-height: 30px;
         }
     </style>
-    <!--<script type="text/javascript" src="public/js/materialize.minjs"></script> -->
-
-    <title>Currency Converter</title>
+    <title>Currency Converter - #7DaysofCodeChallenge</title>
   </head>
   <body>
     <div class="flex-container">
-        <div border="5px">
-          <small>Andela Learning Community Project for Google</small>
+        <div>
+          <strong class="text-center">ALC #7DaysofCodeChallenge</strong>
             <form id="currency-form">
                 <div class="input-field col s12">
-                  <div>Current Currency</div>
+                  <div><strong>Current Currency</strong></div>
                     <label for="current_amount">
                         <small>Enter the amount</small>
                     </label>
-                    <input type="text" id="current_amount">
-                    <label for="current_currency">
-                        <small>Currency</small>
+                    <input type="text" id="current_amount" class="form-control form-control-sm">
+                    <label for="current_currency"><br>
+                        <small>Select Currency</small>
                     </label>
                     <select id="current_currency" class="form-control"></select>
                 </div>
-                <hr>
+                
                 <div class="input-field col s12">
-                    <div>Equivalent Currency</div>
-                    <label for="equivalent_amount">
-                        <small>Equivalent Amount</small>
-                    </label>
-                    <input type="text" id="equivalent_amount" placeholder="pending" readonly>
+                    <div><strong>Equivalent Currency</strong></div>
                     <label for="equivalent_currency">
-                        <small>Currency</small>
+                        <small>Select Currency</small>
                     </label>
                     <select id="equivalent_currency"></select>
+                    <label for="equivalent_amount"><br>
+                        <small>Equivalent Amount</small>
+                    </label>
+                    <input type="text" id="equivalent_amount" class="form-control form-control-sm" readonly>
                 </div>
-                <button type="submit">Convert</button>
+                <input type="submit" class="btn btn-info" value="Convert">
             </form>
-            <div style="background-color: yellow">
-                HELLO WORLD
+            <div style="background-color:#FFFF66">
+                Resources:
+                <a href="https://free.currencyconverterapi.com/api/v5/currencies">currencyconverterapi</a><br>
+                <div>
+                    <a href=""><i class="fa fa-github"></i></a>
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                </div>
             </div>
         </div>
     </div>
-    <!--JavaScript -->
+    <!-- JAVASCRIPT -->
     <script type="text/javascript" src="public/js/app.js"></script>
+    <script type="text/javascript" src="public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="public/js/popper.min.js"></script>
+    <script type="text/javascript" src="public/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="public/js/sw/sw.js"></script>
   </body>
 </html>
