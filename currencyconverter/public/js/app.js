@@ -1,11 +1,3 @@
-//// CHECKING IF INDEXEDDB IS SUPPORTED
-if (!window.indexedDB) {
-    window.alert('Your browser does not support a stable version of IndexedDB');
-}
-else {
-  console.log("Your browser supports IndexedDB");
-}
-
 
 // TO GET ALL THE CURRENCIES AVAILABLE
 fetch('https://free.currencyconverterapi.com/api/v5/currencies')
@@ -79,8 +71,16 @@ form_element.addEventListener('submit', event => {
 //let idb = 'https://foluwa.github.io/currencyconverter/public/js/sw.js';
 //GETTING IDB
 //import idb from 'idb.js';
+//// CHECKING IF INDEXEDDB IS SUPPORTED
+if (!window.indexedDB) {
+    window.alert('Your browser does not support a stable version of IndexedDB');
+}
+else {
+  console.log("Your browser supports IndexedDB");
+}
 
-const dbPromise = idb.open('currencyConverter', 3, (upgradeDb) => {
+
+const dbPromise = indexedDB.open('currencyConverter', 3, (upgradeDb) => {
     switch (upgradeDb.oldVersion) {
         case 0:
             upgradeDb.createObjectStore('countries', {
