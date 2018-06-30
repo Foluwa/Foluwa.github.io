@@ -3,7 +3,7 @@ const Mycache = 'kim-currency-conv-v1';
 
 var filesToCache = [
      '.',
-     'appjs',
+     'app.js',
      'jquery.min.js',
      'popper.min.js',
      'bootstrap.bundle.min.js',

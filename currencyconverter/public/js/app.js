@@ -76,7 +76,7 @@ form_element.addEventListener('submit', event => {
 //SERVICE WORKER
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/public/js/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('currencyconverter/public/js/sw.js').then(function(registration) {
       console.log('Registration successful, scope is:', registration.scope);
     })
     .catch(function(error) {
