@@ -76,7 +76,7 @@ form_element.addEventListener('submit', event => {
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // IndexedDb initialization
-const idb = "idb.js";
+//const idb = "idb.js";
 
 const dbPromise = idb.open('currencyConverter', 3, (upgradeDb) => {
     switch (upgradeDb.oldVersion) {

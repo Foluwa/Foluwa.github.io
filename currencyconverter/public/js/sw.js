@@ -1,8 +1,15 @@
+//This is the service worker with the combined offline experience (Offline page + Offline copy of pages)
 
-const myCache = 'currency-conv-v1';
+//Install stage sets up the offline page in the cache and opens a new cache
+self.addEventListener('install', function(event) {
+  event.waitUntil(preLoad());
+});
 
-////FOR MY STATIC FILES
-var filesToCache = [
+var preLoad = function(){
+  console.log('[PWA Builder] Install Event processing');
+  return caches.open('pwabuilder-offline').then(function(cache) {
+    console.log('[PWA Builder] Cached index and offline page during Install');
+    return cache.addAll([
      '.',
      'app.js',
      '/idb.js',
@@ -10,123 +17,58 @@ var filesToCache = [
      'popper.min.js',
      'bootstrap.bundle.min.js',
      '../converter.html',
-     
-  ];
-  
-self.addEventListener('install', event => {
-    event.waitUntil(
-        caches.open(myCache).then( cache => {
-            return cache.addAll(filesToCache);
-        })
-    );
-});
-
-///////////////////////////ACTIVATE
-elf.addEventListener('activate', function (e) {
-  console.log('[ServiceWorker] Activated');
-
-  e.waitUntil(
-
-    // Get all the cache keys (cacheName)
-    caches.keys().then(function (cacheNames) {
-      return Promise.all(cacheNames.map(function (thisCacheName) {
-
-        // If a cached item is saved under a previous cacheName
-        if (thisCacheName !== cacheName) {
-
-          // Delete that cached file
-          console.log('[ServiceWorker] Removing Cached Files from Cache - ', thisCacheName);
-          return caches.delete(thisCacheName);
-        }
-      }));
-    })
-  ); // end e.waitUntil
-
-});
-
-
-//////////////////////////////////////////////FETCH
-
-self.addEventListener('fetch', function (e) {
-  console.log('[ServiceWorker] Fetch', e.request.url);
-
-  // e.respondWidth Responds to the fetch event
-  e.respondWith(
-
-    // Check in cache for the request being made
-    caches.match(e.request)
-
-
-    .then(function (response) {
-
-      // If the request is in the cache
-      if (response) {
-        console.log("[ServiceWorker] Found in Cache", e.request.url, response);
-        // Return the cached version
-        return response;
-      }
-
-      // If the request is NOT in the cache, fetch and cache
-
-      var requestClone = e.request.clone();
-      return fetch(requestClone)
-        .then(function (response) {
-
-          if (!response) {
-            console.log("[ServiceWorker] No response from fetch ")
-            return response;
-          }
-
-          var responseClone = response.clone();
-
-          //  Open the cache
-          caches.open(cacheName).then(function (cache) {
-
-            // Put the fetched response in the cache
-            cache.put(e.request, responseClone);
-            console.log('[ServiceWorker] New Data Cached', e.request.url);
-
-            // Return the response
-            return response;
-
-          }); // end caches.open
-
-        })
-        .catch(function (err) {
-          console.log('[ServiceWorker] Error Fetching & Caching New Data', err);
-        });
-
-
-    }) // end caches.match(e.request)
-  ); // end e.respondWith
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-self.addEventListener('fetch', event => {
-    event.respondWith(
-      caches.match(event.request).then(response => {
-        return response || fetch(event.request);
-      }).catch(()=> {
-        return caches.match('../converter.html');
-      })
-    );
+    
+    ]);
   });
-  */
+}
+
+self.addEventListener('fetch', function(event) {
+  console.log('[PWA Builder] The service worker is serving the asset.');
+  event.respondWith(checkResponse(event.request).catch(function() {
+    return returnFromCache(event.request)}
+  ));
+  event.waitUntil(addToCache(event.request));
+});
+
+var checkResponse = function(request){
+  return new Promise(function(fulfill, reject) {
+    fetch(request).then(function(response){
+      if(response.status !== 404) {
+        fulfill(response)
+      } else {
+        reject()
+      }
+    }, reject)
+  });
+};
+
+var addToCache = function(request){
+  return caches.open('pwabuilder-offline').then(function (cache) {
+    return fetch(request).then(function (response) {
+      console.log('[PWA Builder] add page to offline'+response.url)
+      return cache.put(request, response);
+    });
+  });
+};
+
+var returnFromCache = function(request){
+  return caches.open('pwabuilder-offline').then(function (cache) {
+    return cache.match(request).then(function (matching) {
+     if(!matching || matching.status == 404) {
+       return cache.match(
+     '.',
+     'app.js',
+     '/idb.js',
+     'jquery.min.js',
+     'popper.min.js',
+     'bootstrap.bundle.min.js',
+     '../converter.html')
+     } else {
+       return matching
+     }
+    });
+  });
+};
+
+
+
