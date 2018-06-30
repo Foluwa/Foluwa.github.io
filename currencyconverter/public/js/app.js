@@ -1,4 +1,4 @@
-// get all currencies available
+// TO GET ALL THE CURRENCIES AVAILABLR
 fetch('https://free.currencyconverterapi.com/api/v5/currencies')
     .then(response=> {
        return response.json();
@@ -39,7 +39,7 @@ fetch('https://free.currencyconverterapi.com/api/v5/currencies')
         }
     })
     .catch(err => {
-        console.log("There was an error .", err);
+        console.log("Encountered an error .", err);
     })
 
 
@@ -50,8 +50,6 @@ form_element.addEventListener('submit', event => {
   let equivalentField = document.getElementById('equivalent_currency').value;
    urlQuery =  'https://free.currencyconverterapi.com/api/v5/convert?q='
    qString = urlQuery+currentField+'_'+equivalentField;
- 
-//   console.log(qString);
     fetch(qString)
     .then(response =>{
         return response.json();
@@ -62,7 +60,7 @@ form_element.addEventListener('submit', event => {
         // console.log(queryResult[0][1].val);
         let rate = queryResult[0][1].val;
         return rate;
-        
+        //////////////
     }).then(rate => {
         let amount_Field = document.getElementById('current_amount').value;
         let converted_Value = rate * amount_Field;
@@ -70,12 +68,8 @@ form_element.addEventListener('submit', event => {
     })
 });
 
-
-
-
 //SERVICE WORKER
-
-if ('serviceWorker' in navigator) { //currencyconverter/public/js/sw.js
+if ('serviceWorker' in navigator) { //currencyconverter/public/js/sw.js   /try to use th file system fir this dont not go to https
     navigator.serviceWorker.register('https://foluwa.github.io/currencyconverter/public/js/sw.js').then(function(registration) {
       console.log('Registration successful, scope is:', registration.scope);
     })
@@ -83,24 +77,3 @@ if ('serviceWorker' in navigator) { //currencyconverter/public/js/sw.js
       console.log('Service worker registration failed, error:', error);
     });
   }
-
-
-
-
- //   BEGINING WITH SERVICE WORKER
-
-//REGISTER SERVICE WORKER
-/*
-    if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js') //'/sw/sw.js'
-      .then(reg => console.log('Registration successful'))
-      .catch(() => console.log('Registration failed'));
-  }
-  */
-  /*
-  // open an idb
-  dbPromise = idb.open('currenciesDB', 1, upgradeDB => {
-    upgradeDB.createObjectStore('rates', { keyPath: 'id' });
-  });
-}); */
-////////////////////////////////////////////////////////
