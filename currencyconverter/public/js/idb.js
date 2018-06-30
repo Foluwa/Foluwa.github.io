@@ -79,21 +79,42 @@
     this._index = index;
   }
 
-  proxyProperties(Index, '_index', ['name','keyPath','multiEntry','unique']);
+  proxyProperties(Index, '_index', [
+    'name',
+    'keyPath',
+    'multiEntry',
+    'unique'
+    ]);
 
   proxyRequestMethods(Index, '_index', IDBIndex, [
-    'get','getKey','getAll','getAllKeys','count']);
+    'get',
+    'getKey',
+    'getAll',
+    'getAllKeys',
+    'count'
+    ]);
 
-  proxyCursorRequestMethods(Index, '_index', IDBIndex, ['openCursor','openKeyCursor']);
+  proxyCursorRequestMethods(Index, '_index', IDBIndex, [
+    'openCursor',
+    'openKeyCursor'
+    ]);
 
   function Cursor(cursor, request) {
     this._cursor = cursor;
     this._request = request;
   }
 
-  proxyProperties(Cursor, '_cursor', ['direction','key','primaryKey','value']);
+  proxyProperties(Cursor, '_cursor', [
+    'direction',
+    'key',
+    'primaryKey',
+    'value'
+    ]);
 
-  proxyRequestMethods(Cursor, '_cursor', IDBCursor, ['update','delete']);
+  proxyRequestMethods(Cursor, '_cursor', IDBCursor, [
+    'update',
+    'delete'
+    ]);
   // proxy 'next' methods
   ['advance', 'continue', 'continuePrimaryKey'].forEach(function(methodName) {
     
@@ -189,7 +210,9 @@
   };
 
   proxyProperties(UpgradeDB, '_db', [
-    'name','version','objectStoreNames'
+    'name',
+    'version',
+    'objectStoreNames'
   ]);
 
   proxyMethods(UpgradeDB, '_db', IDBDatabase, [
@@ -205,7 +228,9 @@
   };
 
   proxyProperties(DB, '_db', [
-    'name','version','objectStoreNames'
+    'name',
+    'version',
+    'objectStoreNames'
   ]);
 
   proxyMethods(DB, '_db', IDBDatabase, [
