@@ -73,11 +73,6 @@ form_element.addEventListener('submit', event => {
 
 
 
-
-
-
-
-
 //SERVICE WORKER
 
 if ('serviceWorker' in navigator) {

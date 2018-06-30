@@ -5,7 +5,10 @@ var filesToCache = [
      '.',
      'app.js',
      'jquery.min.js',
+     'popper.min.js',
+     'bootstrap.bundle.min.js',
      '../converter.html',
+     
   ];
   
 self.addEventListener('install', event => {
