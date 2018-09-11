@@ -26,9 +26,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	max-height: 250px;
 	width: 350px;
 }
+
+html,body { height: 100% }
+   .stockIframe {  width:100%; height:100%; }
+   .stockIframe iframe {  width:100%; height:100%; border:0;overflow:hidden }
 </style>
 <!--//fonts-->
-
+<script>
+   function autoResize(i) {
+     var iframeHeight=
+     (i).contentWindow.document.body.scrollHeight;
+     (i).height=iframeHeight+20;
+   } 
+</script>
 </head>
 <body>
 <!--banner start here-->
@@ -48,6 +58,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<ul class="agile_forms" data-aos="fade-left">
 					<li><a class="active" href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</a> </li>
 					<li><a href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Register</a> </li>
+					<li><a href="#" data-toggle="modal" data-target="#myModal4"><i class="fa fa-user" aria-hidden="true"></i> fUND YOUR ACCCONT</a> </li>
 				</ul>
 				<div class="clearfix"> </div>
 				</div>
@@ -68,12 +79,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="index.html" class="active scroll">Home</a></li>
-							<li><a href="#about" class="scroll">About</a></li>
 							<li><a href="#services" class="scroll">Services</a></li>
-							<li><a href="#team" class="scroll">Team</a></li>
-							<li><a href="#gallery" class="scroll">Gallery</a></li>
-							<li><a href="#contact" class="scroll">Contact</a></li>
+							<li><a href="#gallery" class="scroll">Indices</a></li>
+							<li><a href="#gallery" class="scroll">Forex Calendar</a></li>
 							<li><a href="#market" class="scroll">Market</a></li>
+							<li><a href="#contact" class="scroll">Contact</a></li>
 						</ul>
 
 					</div>
@@ -96,15 +106,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</nav>
 		   </div>
 		   </div>
-<div class="container">
+<!--<div class="container">
+		
 		   <div class="banner-bottom">
-		   	   <section class="slider">
+		     <section class="slider">
 				 <div class="flexslider">
 					<ul class="slides">
 					  <li>
 					  	<div class="banner-bottom-text">
 					  			<h3>Get around the clock support from payroll experts</h3>
-						  
 					 	</div>
 					  </li>
 					  <li>
@@ -115,7 +125,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					  <li>
 					  	<div class="banner-bottom-text">
 					  			<h3>Get around the clock support from payroll experts</h3>
-						  
 					 	</div>
 					  </li>
 					  <li>
@@ -126,18 +135,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				    </ul>
 				 </div>
 				 <div class="clearfix"> </div>
-		      </section>
+		      </section> -->
+		      <!--
 			<div class="thim-click-to-bottom">
 				<a href="#about" class="scroll">
 					<i class="fa fa-chevron-down" aria-hidden="true"></i>
 				</a>
-			</div>
+			</div> -->
 			
 		   </div>
 		</div>
 	</div>
 </div>
 </div>
+
+
 <!--banner end here-->
 	<!-- Modal2 -->
 		<div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
@@ -158,18 +170,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</form>
 							</div>
 						    <div class="login-social-grids">
-						<ul>
-																					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-																					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-																					<li><a href="#"><i class="fa fa-rss"></i></a></li>
-																				</ul>
-																			</div>
-																			<p><a href="#" data-toggle="modal" data-target="#myModal3" > Don't have an account?</a></p>
-																		</div>
-																</div>
-															</div>
-														</div>
-													</div>
+								<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="#"><i class="fa fa-rss"></i></a></li>
+								</ul>
+							</div>
+							<p><a href="#" data-toggle="modal" data-target="#myModal3" > Don't have an account?</a></p>
+							</div>
+							</div>
+							</div>
+							</div>
+							</div>
 													<!-- //Modal2 -->	
 													<!-- Modal3 -->
 													<div class="modal fade" id="myModal3" tabindex="-1" role="dialog">
@@ -198,14 +210,36 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 													</div>
 													
 		<!-- //Modal3 -->
+		<!-- Modal3 -->
+													<div class="modal fade" id="myModal4" tabindex="-1" role="dialog">
+														<div class="modal-dialog">
+														<!-- Modal content-->
+															<div class="modal-content">
+																<div class="modal-header">
+																	<button type="button" class="close" data-dismiss="modal">&times;</button>
+																	
+																	<div class="signin-form profile">
+																	<h3 class="agileinfo_sign">Fund Your Account</h3>	
+																			<div class="login-form">
+																				<form action="#" method="post">
+																				   <input type="text" name="name" placeholder="Username" required="">
+																					<input type="email" name="email" placeholder="Email" required="">
+																					<input type="password" name="password" placeholder="Password" required="">
+																					<input type="password" name="password" placeholder="Confirm Password" required="">
+																					<input type="submit" value="Register">
+																				</form>
+																			</div>
+																			<p><a href="#"> By clicking register, I agree to your terms</a></p>
+																		</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													
+		<!-- //Modal3 -->
 <!--banner bottom-->
 <div class="banner-btm-w3layouts" id="about">
-	<div class="container"><!--
-	<div class="tittle-agileinfo">
-		<span>01</span>
-		<h2>Welcome to small business accounting</h2>
-		<p >Suspendisse fringilla pellentesque risus sit amet bibendum.</p>
-	</div>-->
+	<div class="container">
 		<div class="about-main">
 		<div class="col-md-4 about-grids" data-aos="zoom-in">
 			<i class="fa fa-bookmark-o" aria-hidden="true"></i>
@@ -230,44 +264,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--//banner bottom-->
 
 <!-- MARKET -->
+
+<div class="stockIframe" style="width:100%; height:100%;">
+	<iframe src="https://globalwidgets.xignite.com/XigniteWebsite/Xignite2/markets.html" onload="autoResize(this)" height="500" width="100%"></iframe> 
+</div>
+
+
+
+
 <div class="banner-btm-w3layouts" id="market">
 	<div class="container">
 		<!-- TradingView Widget BEGIN -->
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-  {
-  "symbols": [
-    {
-      "title": "S&P 500",
-      "proName": "INDEX:SPX"
-    },
-    {
-      "title": "Nasdaq 100",
-      "proName": "INDEX:IUXX"
-    },
-    {
-      "title": "EUR/USD",
-      "proName": "FX_IDC:EURUSD"
-    },
-    {
-      "title": "BTC/USD",
-      "proName": "BITFINEX:BTCUSD"
-    },
-    {
-      "title": "ETH/USD",
-      "proName": "BITFINEX:ETHUSD"
-    }
-  ],
-  "locale": "en"
-}
-  </script>
-</div>
+  	<div class="tradingview-widget-copyright"><a href="https://www.tradingview.com" rel="noopener" target="_blank"></a></div>
+	   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+		  	{
+		  	"symbols": [
+		    {
+		      "title": "S&P 500",
+		      "proName": "INDEX:SPX"
+		    },
+		    {
+		      "title": "Nasdaq 100",
+		      "proName": "INDEX:IUXX"
+		    },
+		    {
+		      "title": "EUR/USD",
+		      "proName": "FX_IDC:EURUSD"
+		    },
+		    {
+		      "title": "BTC/USD",
+		      "proName": "BITFINEX:BTCUSD"
+		    },
+		    {
+		      "title": "ETH/USD",
+		      "proName": "BITFINEX:ETHUSD"
+		    }
+		  	],
+		  	"locale": "en"
+			}
+	  </script>
+</div></div></div>
 <!-- TradingView Widget END -->
 
+
+
 <div>
-		<!-- TradingView Widget BEGIN -->
+
+
+
+
+
+
+
+
+
 
 <!-- TradingView Widget END -->
 
@@ -294,11 +346,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--services -->
 <div class="services-agileits" id="services">
 	<div class="container">
-	<div class="tittle-agileinfo">
-		<span>02</span>
-		<h3>Accounting Services</h3>
-		<p >Suspendisse fringilla pellentesque risus sit amet bibendum.</p>
-	</div>
 		<div class="services-agileits-w3layouts">
 		<div class="col-md-3 service-grids">
 			<i class="fa fa-bookmark-o" aria-hidden="true" data-aos="zoom-in"></i>
@@ -331,11 +378,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Team -->
 <div class="team" id="team">
 		<div class="container">
-		<div class="tittle-agileinfo">
-			<span>03</span>
-			<h3>Our marvellous team</h3>
-			<p >Suspendisse fringilla pellentesque risus sit amet bibendum.</p>
-		</div>
 		</div>
 			<div class="agile_team_grids">
 				<div class="col-md-3 agile_team_grid" data-aos="zoom-in">
@@ -407,7 +449,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //Team -->
 <!-- Stats -->
-<div>
+					<div><!--
 							<div class="w3ls_agile_circle_progress agile_info_shadow" id="skills">
 								<div class="cir_agile_info ">
 									  <div class="skill-grids">
@@ -430,8 +472,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>
 										 <div class="clearfix"></div>
 								</div>
-							</div>
-						</div>
+							</div> -->
+					</div>
 
 	<!-- //Stats -->
 
@@ -543,11 +585,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- testimonials -->
 	<div class="testimonials">
 		<div class="container">
-		<div class="tittle-agileinfo">
-			<span>06</span>
-			<h3>Customers feedback</h3>
-			<p >Suspendisse fringilla pellentesque risus sit amet bibendum.</p>
-		</div>
 			<div class="w3_testimonials_grids">
 				<div id="slideshow" class="disabled">
 					<button class="previous"><b>« Previous</b></button>
@@ -641,11 +678,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- contact -->
 	<div class="contact" id="contact">
 		<div class="container">
-		<div class="tittle-agileinfo">
-			<span>08</span>
-			<h3>Contact Info</h3>
-			<p >Suspendisse fringilla pellentesque risus sit amet bibendum.</p>
-		</div>
 			<div class="agile-contact-grids">
 					<div class="col-md-6 address-grid" data-aos="flip-left">
 						<h4>Our Address</h4>
