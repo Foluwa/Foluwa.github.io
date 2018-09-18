@@ -17,6 +17,7 @@
 <!--fonts-->
 <link href="//fonts.googleapis.com/css?family=Cabin:400,500,600,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <style type="text/css">
@@ -43,6 +44,9 @@ html,body { height: 100% }
 	font-size: 20px;
 	font-weight: 30px;
 }
+.view-sixth{
+	padding-right: 10px;
+}
 </style>
 <!--//fonts-->
 <script>
@@ -55,11 +59,11 @@ html,body { height: 100% }
 </head>
 <body>
 <!--banner start here-->
-<div class="banner" id="home">
+<div class="banner" id="home" style="min-height: 795px;background-size: cover;position: relative;">
 <div class="agileinfo-dot">
    <div class="header">
 	<div class="header-main">
-	  <div class="header-top-agileits">
+	   <div class="header-top-agileits">
 		<div class="container">
 		  <div class="w3l-social" data-aos="fade-right">
 			<ul>
@@ -68,8 +72,7 @@ html,body { height: 100% }
 		  </div>
 
 			<ul class="agile_forms" data-aos="fade-left">
-				<li class="nav-item dropdown">
-				<a href="#" data-toggle="dropdown" data-target="dropdown" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-language" aria-hidden="true"></i>Languages
+				<li class="nav-item dropdown"><a href="#" data-toggle="dropdown" data-target="dropdown" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-language" aria-hidden="true"></i>Languages
 				</a></li>
 				<li><a class="active" href="#" data-toggle="modal" data-target="#myModal3"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Open live account</a></li>
 				<li><a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-sign-in" aria-hidden="true"></i>Login</a></li>
@@ -342,8 +345,6 @@ html,body { height: 100% }
 					<div class="view view-sixth">
 						<img src="images/t1.jpg" alt=" " class="timages img-responsive">
 						<div class="mask">
-							<!--<h5>Agnese brent</h5>-->
-							<p>Text will go here.</p>
 							<div class="w3l-social">
 								<ul>
 									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -353,6 +354,7 @@ html,body { height: 100% }
 							</div>
 						</div>
 					</div>
+					<p>Text will go here.</p>
 				</div>
 				<div class="col-md-3 agile_team_grid" data-aos="zoom-in">
 					<div class="view view-sixth">
@@ -530,16 +532,16 @@ html,body { height: 100% }
 						<li class="my-2">
 							<a href="#" style="color:#fff;">About Us</a>
 						</li>
-						<li>
+						<li class="my-2">
 							<a href="#" style="color:#fff;">Services</a>
 						</li>
 						<li class="my-2">
 							<a href="#" style="color:#fff;">Banking</a>
 						</li>
-						<li>
+						<li class="my-2">
 							<a href="#" style="color:#fff;">Partnership</a>
 						</li>
-						<li class="mt-2">
+						<li class="my-2">
 							<a href="#" style="color:#fff;">Tools</a>
 						</li>
 					</ul>
@@ -610,6 +612,23 @@ html,body { height: 100% }
 
 <!-- js -->
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+		//Array of images which you want to show: Use path you want.
+		var images=new Array('images/bann1.jpg','images/bann2.jpg','images/bann3.jpg');
+		var nextimage=0;
+		doSlideshow();
+
+		function doSlideshow(){
+		    if(nextimage>=images.length){nextimage=0;}
+		    $('.banner')
+		    .css('background-image','url("'+images[nextimage++]+'")')
+		    .fadeIn(500,function(){
+		        setTimeout(doSlideshow,3000);
+		    });
+		    //background: url(images/bann2.jpg)no-repeat center;
+		}
+	 </script>
 <!--search-bar-->
 <script src="js/main.js"></script>	
 <!--//search-bar-->
