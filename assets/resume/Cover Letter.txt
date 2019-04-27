@@ -1,35 +1,27 @@
 Dear Hiring Manager,
 
 
-
-I would like to express my deep interest in the available position as a Backend Engineer for I2X
-
+I would like to express my deep interest in the available position as a Vue.js Developer for Sipwise.
 
 
-As an undergraduate I acquired skills while interning with Hotels.ng and participating in the Andela Learning Communities with writing, building, and deploying softwares, I believe I am a strong candidate for a position at I2X
+As an undergraduate I acquired skills while interning with Hotels.ng and participating in the Andela Learning Communities with writing, building, and scalable softwares, I believe I am a strong candidate for a position at Sipwise.
 
 
 
-You specify that you are looking for someone with web development data and debugging skills. As a Computer Science major at Osun State University, I have become a skilled developer with a variety of software experience.
+You specified that you are looking for someone that can implement, integrate and test new features in our customer self-care web-ui.I have become a skilled developer writing write clean and maintainable code inJavaScript(ES6). I also use Git, Mocha and NIX environments.
 
-
-
-My practical experience, attention to detail, and eagerness and passion for innovation made me an excellent software developer. I am confident that I would be a beneficial addition to I2X
 
 
 Thank you so much for your time and consideration.
 
 
-
 Sincerely,
 
 
-
-Akintola Moronfoluwa
+MORONFOLUWA AKINTOLA
 
 Github: https://github.com/foluwa
 
-Website: http://fantasticfoluwa.me
 
 
 
