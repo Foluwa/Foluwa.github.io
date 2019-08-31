@@ -311,14 +311,17 @@ pre {
 		font-size: 72px;
 		color: $brand-black;
 		line-height: 1.2;
+		margin-bottom: auto;
 		@media screen and (max-width: $screen-sm) {
 			font-size: 40px;
+			margin-bottom: auto;
 		}
 	}
 	.fh5co-intro-sub {
 		margin: 2em 0; 
 		@media screen and (max-width: $screen-sm) {
 			margin: 1em 0; 
+			margin-bottom: auto;
 		}
 	}
 }
