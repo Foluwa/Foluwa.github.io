@@ -1,0 +1,36 @@
+{
+  "name": "rcfuniosunosogbo",
+  "short_name": "rcfuniosunosogbo",
+  "icons": [
+    {
+      "src": "../images/icons/logo-icon.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "../images/icons/logo-icon.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "../images/icons/logo-icon.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "../images/icons/logo-icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "../images/icons/logo-icon.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/?homescreen=1",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#658361",
+  "theme_color": "#400000"
+}
