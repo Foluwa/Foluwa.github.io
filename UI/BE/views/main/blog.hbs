@@ -1,0 +1,25 @@
+<div class="container-wrap">
+	<div id="fh5co-news">
+				<div class="row animate-box">
+					<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
+						<h2>Our Messages</h2>
+					</div>
+				</div>
+				<div class="row">
+				{{# each posts }} 
+		        	{{# each this }} 
+					<div class="col-md-3 animate-box">
+							<div class="news">
+								<a href="/blog-post/{{this.id}}" class="img-holder"><img class="img-responsive" src="{{this.url}}" alt="{{this.title}}"></a>
+							<div class="desc">
+									<span class="date">{{this.date}}</span>
+									<h3><a href="/blog-post/{{this.id}}">{{this.title}}</a></h3>					
+									<a href="/blog-post/{{this.id}}">Read More <i class="icon-arrow-right3"></i></a>
+								</div>
+							</div>
+					</div>
+				    {{/each}}
+	        	{{/each}}
+				</div>
+	</div>
+</div>

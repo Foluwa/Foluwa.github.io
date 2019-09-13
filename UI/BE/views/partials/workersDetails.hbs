@@ -1,0 +1,135 @@
+<div>
+
+  <ul class="nav nav-tabs container">
+    <li class="active"><a data-toggle="tab" href="#menu1">Workers List</a></li>
+    <li><a data-toggle="tab" href="#menu2">Pending Request</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="menu1" class="tab-pane fade">
+      <div class="table-responsive">
+        <table class="table table-striped table-sm" style="">
+          <thead>
+            <tr>
+              <th><strong>S/N</strong></th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Gender</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          {{# each workers }}
+          {{# each this }}
+          <tbody class="table table-striped table-sm">
+            <tr>
+              <td>{{@index}}</td>
+              <td>{{this.firstName}}</td>
+              <td>{{this.lastName}}</td>
+              <td>{{this.gender}}</td>
+              <td>{{this.deptFellowship}}</td>
+              <td>
+                <button type="button" class="btn btn-primary btn-modify" data-toggle="modal"
+                  data-target="#flipFlop_{{@index}}">More Info
+                </button>
+
+
+                <!-- The modal -->
+                <div class="modal fade" id="flipFlop_{{@index}}" tabindex="-1" role="dialog"
+                  aria-labelledby="modalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="modalLabel">Worker Information</h4>
+                      </div>
+                      <div class="modal-body">
+                        <div>
+                          Name: <strong>{{this.firstName}} {{this.lastName}}<br>
+                            Date of Birth: {{this.dob}}<br>
+                            Gender: {{this.gender}}
+                        </div>
+                        <hr>
+
+                        <div>
+                          <h3>Contact Information</h3>
+                          Phone Number: <strong>{{this.phoneNumber}}<br>
+                            Email: {{this.email}}<br>
+                            Course: {{this.course}}<br>
+                            Department: {{this.deptFellowship}}<br>
+                            Pastor's Seed: {{this.psf}}
+                        </div>
+                        <hr>
+
+                        <div>
+                          <h3>Guardian Details</h3>
+                          Name: {{this.guardianName}}<br>
+                          Number: {{this.guardianNumber}}<br>
+                        </div>
+
+                        <div>
+                          <hr>
+                          Registration Date: {{this.regDate}}
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--END OF MODAL -->
+              </td>
+            </tr>
+          </tbody>
+          {{/each}}
+          {{/each}}
+        </table>
+      </div>
+    </div>
+
+
+
+
+    <div id="menu2" class="tab-pane fade">
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+        aperiam.</p>
+      <table class="table table-striped table-sm" style="">
+        <thead>
+          <tr>
+            <th><strong>S/N</strong></th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Gender</th>
+            <th>Department</th>
+          </tr>
+        </thead>
+        {{# each pendingWorkers }}
+        {{# each this }}
+        <tbody class="table table-striped table-sm">
+          <tr>
+            <td>{{@index}}</td>
+            <td>{{this.firstName}}</td>
+            <td>{{this.lastName}}</td>
+            <td>{{this.gender}}</td>
+            <td>{{this.deptFellowship}}</td>
+            <td>
+              <a href="/accept/{{this._id}}" onclick="return confirm('Are you sure to accept the intending worker?');">
+                <button type="button" class="btn btn-primary btn-modify">Accept</button>
+              </a>
+            </td>
+            <td>
+              <a href="/reject/{{this._id}}" onclick="return confirm('Are you sure to reject the intending worker ?');">
+                <button type="button" class="btn btn-danger btn-modify">Reject</button>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+        {{/each}}
+        {{/each}}
+      </table>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,372 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+<style>
+* {box-sizing: border-box;
+}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+ /* border: 1px solid #ccc;*/
+  background-color: #f1f1f1;
+  width: 10%;
+  height: 100%;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left; 
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  /*border: 1px solid #ccc;*/
+  width: 90%;
+  border-left: none;
+  height: 100%;
+}
+
+
+/* NAVBAR STYLING */
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  /*background-color: #4CAF50;*/
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
+
+/*HIDE SIDEBAR TEXT*/
+@media screen and (max-width: 500px) {
+  .nav-text {
+    display: none;
+  }
+}
+
+</style>
+<div class="container-wrap">
+    <div id="fh5co-about">
+      <h4>Welcome, {{this.user.email}}</h4>
+      <div class="row">
+
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+            <i class="fa fa-fw icon-users"><span class="nav-text">Workers</span></i>
+          </button><!-- Workers Details -->
+          <button class="tablinks" onclick="openCity(event, 'Paris')">
+            <i class="fa fa-fw icon-user-plus"><span class="nav-text">Create</span></i>
+          </button><!-- Create New Admin -->
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+            <i class="fa fa-fw icon-bold"><span class="nav-text">Blog</span></i>
+          </button><!-- New Blogpost -->
+          <button class="tablinks" onclick="openCity(event, 'Lagos')">
+            <i class="fa fa-fw icon-file-word"><span class="nav-text">Posts</span></i>
+          </button><!-- ALL BLOG POSTS -->
+          <button class="tablinks" onclick="openCity(event, 'Ife')">
+            <i class="fa fa-fw icon-images"><span class="nav-text">Gallery</span></i>
+          </button><!-- Photo Gallery -->
+        </div>
+
+        <div id="London" class="tabcontent">
+          <p>Workers Details</p>
+          <div class="container-wrap">{{> workersDetails}}</div>
+        </div>
+
+
+
+        <div id="Paris" class="tabcontent">
+          <h3>Create New Admin</h3>
+          <div class="container-fluid">
+            <form method="POST" action="/signup">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" name="email" class="form-control" placeholder="UserID">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="password" name="password" class="form-control" placeholder="Password">
+                  <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="submit" value="Create Admin" class="btn btn-primary btn-modify">
+                </div>
+              </div>
+            </div>
+            </form>
+          </div>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+          <h3>Create Blog Post</h3>
+          <p>Add a christain post.</p>
+
+            <div class="container-fluid">
+                            <form class="submit-blog-post" method="POST" action="/submit-blog-post">
+
+                                  <div class="form-group">
+                                    <label for="">Blog Title</label>
+                                    <input type="text" name="title" class="form-control" id="" placeholder="" required>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="">Blog Author</label>
+                                    <input type="text" name="author" class="form-control" id="" placeholder="" required>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="">Blog Content</label>
+                                    <textarea type="text" name="body" class="form-control" rows="10" cols="30" id="" placeholder=""required>
+                                    </textarea>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="">Add a  Picture to Blog</label>
+                                    <div class="row">
+                                      <div class="col-md-2">
+                                        <button id="upload_widget" class="cloudinary-button">Add Picture</button>
+                                      </div>
+                                      <div class="col-md-10">
+                                        <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                                        <input type="url" name="url" class="form-control" id="url" placeholder="Image URL" required readonly>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                    <label for="">Blog Tags</label>
+                                    <select name="tags" class="form-control" reequired>
+                                      <option value="">Select a Tag</option>
+                                      <option value="Fashion">Fashion</option>
+                                      <option value="Relationship">Relationship</option>
+                                      <option value="Sports">Sports</option>
+                                      <option value="Lifestyle">Lifestyle</option>
+                                      <option value="Word">Word</option>
+                                      <option value="Marriage">Marriage</option>
+                                    </select>
+                                  </div>
+
+                                  <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                                  <input type="submit" class="btn btn-primary btn-modify" value="Submit Blog Post" id="post-button">
+                            </form>
+                       </div>
+        </div>
+
+        <div id="Lagos" class="tabcontent">
+          <h3>All BLOG POSTS</h3>
+          <div class="table-responsive">
+          <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>S/N</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th></th>
+            </tr>
+          </thead>
+           {{# each posts }} 
+             {{# each this }}
+          <tbody>
+            <tr>
+              <td>{{# each index }}  {{@index}} {{/each}}</td>
+              <td>{{this.title}}</td>
+              <td>{{this.author}}</td>
+              <td>
+                <a href="/delete/{{this._id}}"  onclick="return confirm('Are you sure to delete this post ?');" class="btn btn-outline-danger" id="{{this._id}}"><button class="btn btn-danger">DELETE</button></a>
+              </td>
+            </tr>
+          </tbody>
+          {{/each}}
+           {{/each}}
+        </table>
+      </div>
+        </div>
+
+
+        <div id="Ife" class="tabcontent">
+
+          <h4>Add Pictures to the Gallery</h4>
+           <form class="galleryForm" method="POST" action="/gallery">
+
+
+            <div class="form-group">
+              <label for="">Picture Description</label>
+              <input type="text" name="picDesc" class="form-control" id="" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+              <label for="">Add a  Picture to Gallery</label>
+              <div id="galleryPicture"></div>
+                <div class="row">
+                  <div class="col-md-2">
+                    <a id="gallery_upload_widget"  class="cloudinary-button">Add Picture</a>
+                  </div>
+                  <div class="col-md-10">
+                    <input type="text" name="gallery_url" class="form-control" id="gallery_url" placeholder="Image URL" required readonly>
+                  </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+              <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+              <input type="submit" class="btn btn-primary btn-modify" value="Submit Picture" id="submitPicture">
+            </div>
+
+        </div>
+
+
+        
+      </div>
+    </div>
+
+    <div id="fh5co-counter" class="fh5co-counters fh5co-light-grey">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center animate-box">
+          <p>RCF UNIOSUN ADMINISTRATION</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- END container-wrap -->
+
+
+          <script>
+            function openCity(evt, cityName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(cityName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+
+            // Get the element with id="defaultOpen" and click on it
+            document.getElementById("defaultOpen").click();
+        </script>
+
+  <script>
+    CKEDITOR.replace( 'body' );
+  </script>
+
+
+
+
+  <script type="text/javascript">
+    //AJAX TO ADD NEW PICTURE INFORMATION TO THE DB
+    $('.galleryForm').on('submit', function(e){
+      e.preventDefault();
+      $.ajax({
+        url: "/gallery",
+        method: "POST",
+        data: $('.galleryForm').serialize(),
+        beforeSend: function(){
+          console.log("Sending...");
+          $("#submitPicture").html("Submiting Picture...");
+        },
+        success: function(res){
+          alert('Form Submitted');
+          $("#submitPicture").html("Upload");
+          console.log(res)
+          $("#galleryPicture").html('<div class="alert alert-success"><p>'+res.message+'</p></div>')
+        },
+        error: function(err){
+          alert("Not Done")
+          $("#galleryPicture").html('<div class="alert alert-danger"><p>Error Adding Product</p></div>')
+          console.log(err);
+          $("#submitPicture").html("Upload");
+
+        }
+      })
+      reset();
+    })
+
+
+    function reset() {
+      $("#firstName").val("");
+      $("#lastName").val("");
+    }
+    
+           
+  </script>
+
+
+
+  <!-- Initialize Bootstrap functionality -->
+<script>
+// Initialize tooltip component
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+// Initialize popover component
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+</script>
+
+
+
+
+
+
+
+
