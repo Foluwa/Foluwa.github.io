@@ -1,49 +1,56 @@
-   {{# each posts }} 
-   {{# each this }} 
-   <div class="container-wrap">
-		<aside id="fh5co-hero">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url({{this.url}});">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 text-center slider-text">
-				   				<div class="slider-text-inner">
-				   					<h1>RCF MEDIA</h1>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
-		</aside>
-		<div id="fh5co-about">
-			<div class="row">
-				<div class="col-md-4">
-					<blockquote class="dailyVerse">
-						<p>&ldquo;The LORD [is] my strength and my shield; my heart trusted in him, and I am helped: therefore my heart greatly rejoiceth; and with my song will I praise him.&rdquo;</p>
-						<span>Psalms 28:7</span>
-					</blockquote>
-					<a href="/blog">Back</a>
-				</div>
-				<div class="col-md-8">
-					<h3>{{this.title}}</h3>
-					<p>{{this.body}}</p>
-				</div>
-				<div id="disqus_thread" class="container h5co-light-grey"></div>
-						<script>
-						(function() { // DON'T EDIT BELOW THIS LINE
-						var d = document, s = d.createElement('script');
-						s.src = 'https://rcfuniosunosogbo.disqus.com/embed.js';
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
-						})();
-						</script>
-						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-			</div>
-		</div>
-	</div><!-- END container-wrap -->
-	{{/each}}                        
-   {{/each}}
+<main role="main">
+    <!-- Start Intro -->
+    <div id="fh5co-intro">
+        <div class="container">
+            <h3>The Blog Post Title</h3>
+            <!-- <div class="row">
+                        <div class="col-md-6 col-md-push-6 fh5co-intro-sub">
+                            
+                        </div>
+					</div> -->
+            <div class="col-md-12">
+                <p><a href="images/display.jpg" class="image-popup"><img src="images/display.jpg" class="img-responsive"
+                            alt="image"></a></p>
+            </div>
+        </div>
+    </div>
+    <!-- End Intro -->
+
+    <div class="container">
+        <div class="row">
+
+            <div class="fh5co-spacer fh5co-spacer-sm"></div>
+            <div class="col-md-12 col-sm-12">
+                <h2 class="h4">Creativity</h2>
+                <p>Work is a free html5 template crafted with love by freehtml5.com. Released under Creative Commons
+                    3.0 license. Preview images by plmd.me Preview images are not included on downloads.</p>
+            </div>
+        </div>
+        <p>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"
+                data-show-count="false">Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </p>
+    </div>
+
+    <div class="fh5co-spacer fh5co-spacer-md"></div>
+
+    <!-- Start  Let's Chat -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="h4">Related Posts</h2>
+                <p>Checkout similar blogpost</p>
+                <ul class="fh5co-footer-social">
+                    <li><a href="/">PWA</a></li>
+                    <li><a href="/">FLUTTER</a></li>
+                    <li><a href="/">VUE</a></li>
+                    <li><a href="/">REACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End  Let's Chat -->
+    <div class="fh5co-spacer fh5co-spacer-sm"></div>
+
+</main>
