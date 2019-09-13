@@ -52,8 +52,8 @@ router.get("/registration", function(req, res, next) {
 });
 
 /* GET manage page. */
-router.get("/dashboard", isLoggedIn, function(req, res, next) {
-    //,isLoggedIn
+router.get("/dashboard", function(req, res, next) {
+    res.render("main/dashboard");
 });
 
 //DELETE BLOG POST

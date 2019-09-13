@@ -1,56 +1,40 @@
-<div class="container-wrap">
-		<aside id="fh5co-hero">
-			<div class="flexslider">
-				<ul class="slides">
-			   	<li style="background-image: url(images/img_bg_2.jpg);">
-			   		<div class="overlay"></div>
-			   		<div class="container-fluid">
-			   			<div class="row">
-				   			<div class="col-md-6 col-md-offset-3 text-center slider-text">
-				   				<div class="slider-text-inner">
-				   					<h1>Sign In Page</h1>
-										<h2>Agressive Evangelism is our motto</h2>
-				   				</div>
-				   			</div>
-				   		</div>
-			   		</div>
-			   	</li>
-			  	</ul>
-		  	</div>
-		</aside>
-		<div id="fh5co-contact">
-			<div class="row animate-box">
-				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Admin Sign In</h2>
-					<p>Restricted Page (For Admin Only)</p>
-				</div>
+<main role="main">
+	<!-- Form -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="fh5co-uppercase-heading-sm text-center">Sign Into My Account</h2>
+				<div class="fh5co-spacer fh5co-spacer-xs"></div>
 			</div>
-			<div class="row">
-				<div class="col-md-3 col-md-push-8 animate-box">
-				</div>
-				<div class="col-md-7 col-md-pull-2 animate-box">
-					<form class="text-center" method="POST" action="/signin">
-					<div class="row">
-						<div class="col-md-12">
-							<div class="form-group">
-								<input type="email" name="email" class="form-control" placeholder="UserID">
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<input type="password" name="password" class="form-control" placeholder="Password">
-							</div>
-						</div>
-						<div class="col-md-12">
-							<div class="form-group">
-								<input type="hidden" name="_csrf" value="{{ csrfToken }}">
-								<input type="submit" value="Login" class="btn btn-primary btn-modify">
-							</div>
+			<div class="col-md-8 col-md-offset-2">
+				<form action="#" method="post">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="email" class="sr-only">Email</label>
+							<input placeholder="UserID" id="email" type="email" class="form-control input-lg">
 						</div>
 					</div>
-					</form>
-				</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="password" class="sr-only">Password</label>
+							<input placeholder="Password" id="password" type="text" class="form-control input-lg">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="submit" class="btn btn-primary btn-md" value="Sign In">
+
+							<input type="reset" class="btn btn-outline btn-md" value="Reset">
+						</div>
+					</div>
+
+
+				</form>
 			</div>
+
 		</div>
-		</div>
-	</div><!-- END container-wrap -->
+
+	</div>
+	<!-- Form -->
+</main>
+<hr />

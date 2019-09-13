@@ -1,0 +1,103 @@
+<script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+
+<main role="main" class="container">
+    <div id="fh5co-tab-feature-center" class="fh5co-tab text-center" style="display: block; width: 100%; margin: 0px;">
+        <ul class="resp-tabs-list hor_1">
+            <li class="resp-tab-item hor_1 resp-tab-active" aria-controls="hor_1_tab_item-0" role="tab"
+                style="background-color: white;"><i class="fh5co-tab-menu-icon ti-ruler-pencil"></i>BlogPost</li>
+            <li class="resp-tab-item hor_1" aria-controls="hor_1_tab_item-1" role="tab" style=""><i
+                    class="fh5co-tab-menu-icon ti-paint-bucket"></i> Random</li>
+        </ul>
+        <div class="resp-tabs-container hor_1">
+            <h2 class="resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-0"
+                style="background-image: none; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">
+                <span class="resp-arrow ti-angle-down"></span><i class="fh5co-tab-menu-icon ti-ruler-pencil"></i>Design
+            </h2>
+            <div class="resp-tab-content hor_1 resp-tab-content-active resp-accordion-closed"
+                aria-labelledby="hor_1_tab_item-0" style="display: none;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Blog Post Title</label>
+                                    <input placeholder="Blog Post Title" class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Blog Post Author</label>
+                                    <input placeholder="Blog Post Author" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Blog Post Description</label>
+                                    <input placeholder="Blog Post Description" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Estimated Read Time</label>
+                                    <input placeholder="Estimated Read Time" class="form-control" type="number">
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Blog Post Content</label>
+                                    <textarea placeholder="Blog Post Content" id="editor"
+                                        class="form-control input-lg"></textarea>
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Blog Post Tags</label>
+                                    <select class="form-control input-lg">
+                                        <option>Select an Option</option>
+                                        <option value="Javascript">Javascript</option>
+                                        <option value="AI/ML">AI/ML</option>
+                                        <option value="Python">Python</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" value="Submit" class="form-control input-lg" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <h2 class=" resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-1" style=""><span
+                    class="resp-arrow ti-angle-down"></span><i class="fh5co-tab-menu-icon ti-paint-bucket"></i> Branding
+            </h2>
+            <div class="resp-tab-content hor_1" aria-labelledby="hor_1_tab_item-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="h3">Random VVV</h2>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Random. </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>Randomr.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>
