@@ -34,6 +34,11 @@ router.get("/projects", function(req, res, next) {
 });
 
 /* GET about page. */
+router.get("/projectsid", function(req, res, next) {
+    res.render("main/projectsid");
+});
+
+/* GET about page. */
 router.get("/blog", function(req, res, next) {
     res.render("main/blog");
 });
