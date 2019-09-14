@@ -5,6 +5,8 @@
         <ul class="resp-tabs-list hor_1">
             <li class="resp-tab-item hor_1 resp-tab-active" aria-controls="hor_1_tab_item-0" role="tab"
                 style="background-color: white;"><i class="fh5co-tab-menu-icon ti-ruler-pencil"></i>BlogPost</li>
+            <li class="resp-tab-item hor_1" aria-controls="hor_1_tab_item-2" role="tab"
+                style="background-color: white;"><i class="fh5co-tab-menu-icon ti-ruler-pencil"></i>Project Post</li>
             <li class="resp-tab-item hor_1" aria-controls="hor_1_tab_item-1" role="tab" style=""><i
                     class="fh5co-tab-menu-icon ti-paint-bucket"></i> Manage</li>
         </ul>
@@ -120,6 +122,8 @@
                     <hr>
                     <hr>
                     <hr>
+
+
                     <!-- Begining OF Projects-->
                     <div class="col-md-12">
                         <p>Random BlogPosts. </p>
@@ -153,6 +157,55 @@
                     <!-- END OF PROJECTS-->
                 </div>
             </div>
+
+
+            <!-- POST PROJECTS-->
+            <div class="resp-tab-content hor_1 resp-tab-content-active resp-accordion-closed"
+                aria-labelledby="hor_1_tab_item-0" style="display: none;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Project Title</label>
+                                    <input placeholder="Project Title" class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Blog Post Description</label>
+                                    <textarea placeholder="Blog Post Content" id="editor"
+                                        class="form-control input-lg"></textarea>
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Project Type</label>
+                                    <select class="form-control input-lg">
+                                        <option>Select an Option</option>
+                                        <option value="Javascript">Web</option>
+                                        <option value="AI/ML">AI/ML</option>
+                                        <option value="Python">Andriod</option>
+                                        <option value="IoT">IoT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Technologies Used</label>
+                                    <input placeholder="Technologies Used" class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" value="Submit" class="form-control input-lg" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--END OF POST PROJECTS-->
         </div>
     </div>
 </main>
