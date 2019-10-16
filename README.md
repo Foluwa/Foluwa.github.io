@@ -2,7 +2,7 @@
 
 
 # My Portfolio
-[Link](http://fantasticfoluwa.me)
+[Link to my Portfolio](http://fantasticfoluwa.me)
 
 
 
