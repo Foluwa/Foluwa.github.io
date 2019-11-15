@@ -19,13 +19,20 @@ var sess = {
     cookie: {}
 };
 
+//https://stackoverflow.com/questions/3794919/replace-all-spaces-in-a-string-with
+
 app.use(cookieParser());
 // app.use(session(sess));
 app.use(flash());
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-    let successMsg = req.flash("success")[0];
+    res.render("main/index");
+});
+
+/* GET about me page. */
+router.get("/about-me", function(req, res, next) {
+    res.render("main/about");
 });
 
 /* GET about page. */
@@ -40,7 +47,24 @@ router.get("/projectsid", function(req, res, next) {
 
 /* GET about page. */
 router.get("/blog", function(req, res, next) {
-    res.render("main/blog");
+    var productChunks = [];
+
+    Post.find({})
+        .sort({
+            _id: -1
+        })
+        .then(result => {
+            if (result) {
+                for (var i = 0; i < result.length; i++) {
+                    productChunks.push([result[i]]);
+                }
+            }
+            console.log(productChunks);
+            res.render("main/blog", {
+                posts: productChunks,
+                csrfToken: req.csrfToken()
+            });
+        });
 });
 
 /* GET about page. */
@@ -58,9 +82,43 @@ router.get("/registration", function(req, res, next) {
 
 /* GET manage page. */
 router.get("/dashboard", function(req, res, next) {
-    res.render("main/dashboard");
+    res.render("main/dashboard", {
+        csrfToken: req.csrfToken()
+    });
 });
 
+router.post("/submit-blog-post", function(req, res, next) {
+    var options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+    };
+    var today = new Date();
+
+    let post = new Post({
+        date: today.toLocaleDateString("en-US", options),
+        title: req.body.title,
+        imgurl: req.body.imgurl,
+        author: req.body.author,
+        description: req.body.description,
+        content: req.body.content,
+        readtime: req.body.readtime + " minutes",
+        tags: req.body.tags
+    });
+    post
+        .save()
+        .then(() => {
+            res.status(201).json({
+                message: "Post saved successfully!"
+            });
+        })
+        .catch(error => {
+            res.status(400).json({
+                error: error
+            });
+        });
+});
 //DELETE BLOG POST
 router.get("/delete/:id", isLoggedIn, function(req, res) {
     //FIND AND DELETE GROUP

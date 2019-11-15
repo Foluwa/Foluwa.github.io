@@ -5,17 +5,20 @@
         <div class="container">
             <div class="row">
 
+                {{# each posts}}
+                {{# each this }}
                 <div class="container">
                     <header class="major">
-                        <h2>Blog Post Title | <small>Date</small> </h2>
+                        <h4>{{this.title}}| <small>Date</small> </h4>
                     </header>
                     <p>
-                        Short description short description short description short description short description
-                        short description short short description short description short.
+                        {{this.description}}
                     </p>
                     <a href="#" class="button">Read More</a>
                     <hr>
                 </div>
+                {{/each}}
+                {{/each}}
 
                 <div class="container">
                     <header class="major">

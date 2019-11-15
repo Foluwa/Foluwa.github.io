@@ -19,43 +19,55 @@
                 aria-labelledby="hor_1_tab_item-0" style="display: none;">
                 <div class="row">
                     <div class="col-md-12">
-                        <form action="">
+                        <form action="/submit-blog-post" method="POST">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="" class="sr-only">Blog Post Title</label>
-                                    <input placeholder="Blog Post Title" class="form-control input-lg">
+                                    <label for="imgurl" class="sr-only">Image</label>
+                                    <!-- <input name="imgurl" id="imgurl" class="form-control input-lg btn btn-primary"
+                                        type="file" value="Image Upload"> -->
+                                    <input name="imgurl" id="imgurl" class="form-control input-lg" type="text"
+                                        placeholder="IMAGE URL">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="" class="sr-only">Blog Post Author</label>
-                                    <input placeholder="Blog Post Author" class="form-control input-lg">
+                                    <label for="title" class="sr-only">Blog Post Title</label>
+                                    <input name="title" id="title" placeholder="Blog Post Title"
+                                        class="form-control input-lg">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="" class="sr-only">Blog Post Description</label>
-                                    <input placeholder="Blog Post Description" class="form-control input-lg">
+                                    <label for="author" class="sr-only">Blog Post Author</label>
+                                    <input name="author" id="author" placeholder="Blog Post Author"
+                                        class="form-control input-lg">
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="" class="sr-only">Estimated Read Time</label>
-                                    <input placeholder="Estimated Read Time" class="form-control input-lg"
-                                        type="number">
+                                    <label for="description" class="sr-only">Blog Post Description</label>
+                                    <input name="description" id="description" placeholder="Blog Post Description"
+                                        class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="readtime" class="sr-only">Estimated Read Time</label>
+                                    <input name="readtime" id="readtime" placeholder="Estimated Read Time"
+                                        class="form-control input-lg" type="number">
                                 </div>
                             </div>
                             <div class=" col-md-12">
                                 <div class="form-group">
-                                    <label for="" class="sr-only">Blog Post Content</label>
-                                    <textarea placeholder="Blog Post Content" id="editor"
+                                    <label for="content" class="sr-only">Blog Post Content</label>
+                                    <textarea name="content" id="content" placeholder="Blog Post Content" id="editor"
                                         class="form-control input-lg"></textarea>
                                 </div>
                             </div>
                             <div class=" col-md-12">
                                 <div class="form-group">
-                                    <label for="" class="sr-only">Blog Post Tags</label>
-                                    <select class="form-control input-lg">
+                                    <label for="tags" class="sr-only">Blog Post Tags</label>
+                                    <select name="tags" id="tags" class="form-control input-lg">
                                         <option>Select an Option</option>
                                         <option value="Javascript">Javascript</option>
                                         <option value="AI/ML">AI/ML</option>
@@ -65,6 +77,7 @@
                             </div>
                             <div class=" col-md-12">
                                 <div class="form-group">
+                                    <input type="hidden" name="_csrf" value="{{ csrfToken }}">
                                     <input type="submit" value="Submit" class="form-control input-lg" />
                                 </div>
                             </div>
