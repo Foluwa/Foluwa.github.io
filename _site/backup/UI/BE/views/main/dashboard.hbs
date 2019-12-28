@@ -1,0 +1,236 @@
+<script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
+
+<main role="main" class="container">
+    <div id="fh5co-tab-feature-center" class="fh5co-tab text-center" style="display: block; width: 100%; margin: 0px;">
+        <ul class="resp-tabs-list hor_1">
+            <li class="resp-tab-item hor_1 resp-tab-active" aria-controls="hor_1_tab_item-0" role="tab"
+                style="background-color: white;"><i class="fh5co-tab-menu-icon ti-ruler-pencil"></i>BlogPost</li>
+            <li class="resp-tab-item hor_1" aria-controls="hor_1_tab_item-2" role="tab"
+                style="background-color: white;"><i class="fh5co-tab-menu-icon ti-ruler-pencil"></i>Project Post</li>
+            <li class="resp-tab-item hor_1" aria-controls="hor_1_tab_item-1" role="tab" style=""><i
+                    class="fh5co-tab-menu-icon ti-paint-bucket"></i> Manage</li>
+        </ul>
+        <div class="resp-tabs-container hor_1">
+            <h2 class="resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-0"
+                style="background-image: none; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial;">
+                <span class="resp-arrow ti-angle-down"></span><i class="fh5co-tab-menu-icon ti-ruler-pencil"></i>Design
+            </h2>
+            <div class="resp-tab-content hor_1 resp-tab-content-active resp-accordion-closed"
+                aria-labelledby="hor_1_tab_item-0" style="display: none;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="/submit-blog-post" method="POST">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="imgurl" class="sr-only">Image</label>
+                                    <!-- <input name="imgurl" id="imgurl" class="form-control input-lg btn btn-primary"
+                                        type="file" value="Image Upload"> -->
+                                    <input name="imgurl" id="imgurl" class="form-control input-lg" type="text"
+                                        placeholder="IMAGE URL">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="title" class="sr-only">Blog Post Title</label>
+                                    <input name="title" id="title" placeholder="Blog Post Title"
+                                        class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="author" class="sr-only">Blog Post Author</label>
+                                    <input name="author" id="author" placeholder="Blog Post Author"
+                                        class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="description" class="sr-only">Blog Post Description</label>
+                                    <input name="description" id="description" placeholder="Blog Post Description"
+                                        class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="readtime" class="sr-only">Estimated Read Time</label>
+                                    <input name="readtime" id="readtime" placeholder="Estimated Read Time"
+                                        class="form-control input-lg" type="number">
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="content" class="sr-only">Blog Post Content</label>
+                                    <textarea name="content" id="content" placeholder="Blog Post Content" id="editor"
+                                        class="form-control input-lg"></textarea>
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="tags" class="sr-only">Blog Post Tags</label>
+                                    <select name="tags" id="tags" class="form-control input-lg">
+                                        <option>Select an Option</option>
+                                        <option value="Javascript">Javascript</option>
+                                        <option value="AI/ML">AI/ML</option>
+                                        <option value="Python">Python</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <input type="hidden" name="_csrf" value="{{ csrfToken }}">
+                                    <input type="submit" value="Submit" class="form-control input-lg" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <h2 class=" resp-accordion hor_1" role="tab" aria-controls="hor_1_tab_item-1" style=""><span
+                    class="resp-arrow ti-angle-down"></span><i class="fh5co-tab-menu-icon ti-paint-bucket"></i> Branding
+            </h2>
+            <div class="resp-tab-content hor_1" aria-labelledby="hor_1_tab_item-1">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="h3">Random</h2>
+                    </div>
+                    <!--BEGINING OF BLOG POSTS-->
+                    <div class="col-md-12">
+                        <p>Random BlogPosts. </p>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Blog post Date</th>
+                                    <th scope="col">Blog Title</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>12/05/2019</td>
+                                    <td>Progressive Web Applications</td>
+                                    <td><button class="btn btn-primary">Edit</button></td>
+                                    <td><button class="btn btn-danger">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>12/05/2019</td>
+                                    <td>Progressive Web Applications</td>
+                                    <td><button class="btn btn-primary">Edit</button></td>
+                                    <td><button class="btn btn-danger">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>12/05/2019</td>
+                                    <td>Progressive Web Applications</td>
+                                    <td><button class="btn btn-primary">Edit</button></td>
+                                    <td><button class="btn btn-danger">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- END OF BLOG POSTS-->
+
+                    <hr>
+                    <hr>
+                    <hr>
+
+
+                    <!-- Begining OF Projects-->
+                    <div class="col-md-12">
+                        <p>Random BlogPosts. </p>
+                        <table class="table">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Project Title</th>
+                                    <th scope="col">Blog Title</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>12/05/2019</td>
+                                    <td>Whogobuyam</td>
+                                    <td>Description</td>
+                                    <td><button class="btn btn-danger">Delete</button></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>12/05/2019</td>
+                                    <td>Welocator</td>
+                                    <td>Description</td>
+                                    <td><button class="btn btn-danger">Delete</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- END OF PROJECTS-->
+                </div>
+            </div>
+
+
+            <!-- POST PROJECTS-->
+            <div class="resp-tab-content hor_1 resp-tab-content-active resp-accordion-closed"
+                aria-labelledby="hor_1_tab_item-0" style="display: none;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form action="">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Project Title</label>
+                                    <input placeholder="Project Title" class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Blog Post Description</label>
+                                    <textarea placeholder="Blog Post Content" id="editor"
+                                        class="form-control input-lg"></textarea>
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Project Type</label>
+                                    <select class="form-control input-lg">
+                                        <option>Select an Option</option>
+                                        <option value="Javascript">Web</option>
+                                        <option value="AI/ML">AI/ML</option>
+                                        <option value="Python">Andriod</option>
+                                        <option value="IoT">IoT</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <label for="" class="sr-only">Technologies Used</label>
+                                    <input placeholder="Technologies Used" class="form-control input-lg">
+                                </div>
+                            </div>
+                            <div class=" col-md-12">
+                                <div class="form-group">
+                                    <input type="submit" value="Submit" class="form-control input-lg" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--END OF POST PROJECTS-->
+        </div>
+    </div>
+</main>
+<hr>
+
+<script>
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(editor => {
+            console.log(editor);
+        })
+        .catch(error => {
+            console.error(error);
+        });
+</script>

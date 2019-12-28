@@ -1,0 +1,66 @@
+# Website settings
+url: "https://www.ybrikman.com"
+
+# Internal nav
+nav:
+  main:
+    writing: "/writing"
+    projects: "/projects"
+  writing:
+    all: "/writing"
+    popular: "/writing/popular"
+    tags: "/writing/tags"
+    rss: "/feed.xml"
+
+# Bio settings
+name: "Moronfoluwa Akintola"
+description: "The home page of Moronfoluwa Akintola, My name is Moronfoluwa Akintola,   A FullStack Javascript Engineer.  I use ExpressJS, Node and MongoDB. I also have knowledge of Google Cloud. I currently live in Ibadan, Nigeria. I have been writing Software for 2+ years professionally. intending to hire? view my resume &quot;"
+thumbnail_path: "profile-photos/moronfoluwa_akintola.jpg"
+hello_startup_url: "https://www.hello-startup.net/"
+website_repo_url: "https://github.com/brikis98/yevgeniy-brikman-homepage"
+atomic_squirrel_url: "https://www.atomic-squirrel.net/"
+gruntwork_url: "https://www.gruntwork.io/"
+terraform_up_and_running_url: "https://www.terraformupandrunning.com/"
+terraform_up_and_running_code_url: "https://github.com/brikis98/terraform-up-and-running-code"
+
+# URLs
+contact_urls:
+  twitter:
+    url: "https://twitter.com/fantasticfoluwa"
+    label: "Twitter"
+    icon: "twitter-square"
+    username: "@fantasticfoluwa"
+  linkedin:
+    url: "https://www.linkedin.com/in/moronfoluwaakintola/"
+    label: "LinkedIn"
+    icon: "linkedin-square"
+  facebook:
+    url: "https://www.facebook.com/akintola.moronfoluwar"
+    label: "Facebook"
+    icon: "facebook-square"
+  github:
+    url: "https://github.com/foluwa/"
+    label: "GitHub"
+    icon: "github-square"
+  email:
+    url: "mailto:moronfoluwaakintola@gmail.com"
+    label: "Email"
+    value: "moronfoluwaakintola@gmail.com"
+    icon: "envelope-square"
+
+# Jekyll build settings
+paginate: 10
+paginate_path: "/writing/page:num"
+permalink: "/writing/:year/:month/:day/:title/"
+sass:
+  sass_dir: "/assets/css"
+  style: :compressed
+highlighter: rouge
+timezone: 'America/Los_Angeles'
+repository: brikis98/yevgeniy-brikman-homepage
+
+# Plugins (GitHub Pages only support a few)
+gems:
+  - jekyll-redirect-from
+  - jekyll-sitemap
+  - jekyll-paginate
