@@ -6,5 +6,23 @@
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
+      <item>
+        <title>I Hate CSS</title>
+                
+        
+          <description>&lt;p&gt;Those of you who design webpages have probably seen this rant before. In fact, 
+if you search google for “I Hate CSS” you will find. 
+&lt;a href=&quot;http://www.evilgeniuschronicles.org/wordpress/2005/06/12/i-hate-css/&quot;&gt;lots&lt;/a&gt;. 
+&lt;a href=&quot;http://www.artblog.net/?name=2005-08-08-14-24-css&quot;&gt;of&lt;/a&gt;. 
+&lt;a href=&quot;http://blog.taragana.com/index.php/archive/i-hate-css-i-hate-hacking-php-hacks/&quot;&gt;results&lt;/a&gt;. 
+Still, I need to rant a bit.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 01 Nov 2007 12:45:00 -0700</pubDate>
+        <link>http://localhost:4000/writing/2007/11/01/i-hate-css/</link>
+        <guid isPermaLink="true">http://localhost:4000/writing/2007/11/01/i-hate-css/</guid>
+      </item>
+    
   </channel>
 </rss>

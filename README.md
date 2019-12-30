@@ -1,6 +1,13 @@
-#  Home Page
+# Moronfoluwa Akintola Home Page
 
-This is the code for the [ Foluwa's Page](https://foluwa.github.io).
+This is the code for the [Moronfoluwa Akintola Home Page](https://www.ybrikman.com).
+
+![Moronfoluwa Akintola Home Page Screenshot](/assets/img/screenshots/ybrikman-homepage-screenshot.png)
+
+I wanted a clean, simple home page where I could put my writing, speaking,
+projects, and photos. It had to be fast, mobile-friendly, free to build, and
+easy to update. This is the result. Forks and pull requests are welcome!
+
 
 ## Quick start
 
@@ -12,6 +19,21 @@ This is the code for the [ Foluwa's Page](https://foluwa.github.io).
 
 See the [Jekyll](http://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/)
 documentation for more info.
+
+
+
+
+## Docker quick start
+
+As an alternative to installing Ruby and Jekyll, if you're a user of
+[Docker](https://www.docker.com/), you can run a Docker image of
+yevgeniy-brikman-homepage that has all the dependencies already setup for you.
+
+1. `git clone` this repo
+2. `docker-compose up`
+3. Go to `http://localhost:4000` to test
+
+
 
 
 ## Technologies
