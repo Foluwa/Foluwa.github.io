@@ -1,8 +1,8 @@
-# Yevgeniy Brikman Home Page
+# Moronfoluwa Akintola Home Page
 
-This is the code for the [Yevgeniy Brikman Home Page](https://www.ybrikman.com).
+This is the code for the [Moronfoluwa Akintola Home Page](https://www.ybrikman.com).
 
-![Yevgeniy Brikman Home Page Screenshot](/assets/img/screenshots/ybrikman-homepage-screenshot.png)
+![Moronfoluwa Akintola Home Page Screenshot](/assets/img/screenshots/ybrikman-homepage-screenshot.png)
 
 I wanted a clean, simple home page where I could put my writing, speaking,
 projects, and photos. It had to be fast, mobile-friendly, free to build, and
