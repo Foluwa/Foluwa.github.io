@@ -45,6 +45,10 @@ contact_urls:
     url: "https://github.com/foluwa/"
     label: "GitHub"
     icon: "github-square"
+  reddit:
+    url: "https://www.reddit.com/user/Foluwa120"
+    label: "Reddit"
+    icon: "reddit-square"
   email:
     url: "mailto:moronfoluwaakintola@gmail.com"
     label: "Email"
