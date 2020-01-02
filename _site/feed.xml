@@ -7,10 +7,23 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
+        <title>Cases used in Programming</title>
+                
+        
+          <description>&lt;h2 id=&quot;heres-some-common-cases-used-in-programming&quot;&gt;Here’s some common #Cases used in #Programming;&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Sun, 01 Dec 2019 11:45:00 -0800</pubDate>
+        <link>http://localhost:4000/writing/2019/12/01/common-cases-in-programming/</link>
+        <guid isPermaLink="true">http://localhost:4000/writing/2019/12/01/common-cases-in-programming/</guid>
+      </item>
+    
+      <item>
         <title>Introduction to Numpy</title>
                 
         
-          <description>&lt;h1 id=&quot;beginner-intro-to-numpy&quot;&gt;Beginner Intro to Numpy&lt;/h1&gt;
+          <description>&lt;h3 id=&quot;what-exactly-is-numpy&quot;&gt;What exactly is Numpy?&lt;/h3&gt;
 
 </description>
         

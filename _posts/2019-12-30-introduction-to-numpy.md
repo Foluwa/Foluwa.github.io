@@ -4,7 +4,6 @@ title: Introduction to Numpy
 date: '2019-12-01T12:45:00.000-07:00'
 author: Moronfoluwa Akintola
 tags:
-- Software Engineering
 - Artificial Intelligence
 - Jupyter notebooks
 - Machine Learning
@@ -12,8 +11,6 @@ thumbnail_path: blog/50-lbs-lost/costco-chicken-1.jpg
 modified_time: '2011-08-06T15:10:36.793-07:00'
 ---
 
-
-# Beginner Intro to Numpy
 
 ### What exactly is Numpy?
 
