@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {% include share-meta.html %}
 <link rel="canonical" href="{% include canonical-url.html %}">
-<link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.url }}{{ site.nav.writing.rss }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.name }}"
+    href="{{ site.url }}{{ site.nav.writing.rss }}">
 {% include favicon.html %}
 {% include styles.html %}
+<script>
+    if ("serviceWorker" in navigator) {
+        if (navigator.serviceWorker.controller) {
+            console.log("An active service worker found, no need to register");
+        } else {
+            // Register the service worker
+            navigator.serviceWorker
+                .register("/assets/js/serviceworker.js", {  //   {{ site.baseurl }}/serviceworker.js
+                    scope: "./assets/js/"
+                })
+                .then(function (reg) {
+                    console.log("Service worker has been registered for scope: " + reg.scope);
+                });
+        }
+    }
+</script>

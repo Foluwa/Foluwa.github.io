@@ -4,10 +4,10 @@ url: "https://www.foluwa.github.io"
 # Internal nav
 nav:
   main:
-    writing: "/writing"
-#    speaking: "/speaking"
+#    about: "/about"
+#    writing: "/writing"
+    blog: "/blog"
     projects: "/projects"
-#    photos: "https://get.google.com/albumarchive/105725955499217588296"
   writing:
     all: "/writing"
     popular: "/writing/popular"
@@ -16,7 +16,7 @@ nav:
 
 # Bio settings
 name: "Moronfoluwa Akintola"
-description: "The home page of Moronfoluwa Akintola, My name is Moronfoluwa Akintola,   A FullStack Javascript Engineer.  I use ExpressJS, Node and MongoDB. I also have knowledge of Google Cloud. I currently live in Ibadan, Nigeria. I have been writing Software for 2+ years professionally. intending to hire? view my resume &quot;"
+description: "The home page of Moronfoluwa Akintola, My name is Moronfoluwa Akintola,   A FullStack Javascript Engineer.  I use ExpressJS, Node and MongoDB. I also have knowledge of Google Cloud. I currently live in Lagos, Nigeria. I have been writing Software for 2+ years professionally. intending to hire? view my resume &quot;"
 thumbnail_path: "profile-photos/moronfoluwa-akintola-medium.png"
 # bitcoin_address: "1G8qEUVUS8BBSwSWNM4EWR622vUpGtee66"
 # hello_startup_url: "https://www.hello-startup.net/"
@@ -57,14 +57,16 @@ contact_urls:
 
 # Jekyll build settings
 paginate: 10
-paginate_path: "/writing/page:num"
-permalink: "/writing/:year/:month/:day/:title/"
+paginate_path: "/blog/page:num"
+permalink: "/blog/:title/"  #"/writing/:year/:month/:day/:title/"
 sass:
   sass_dir: "/assets/css"
   style: :compressed
 highlighter: rouge
 timezone: 'America/Los_Angeles'
 repository: Foluwa/Foluwa.github.io
+color: "#fff"
+url: "/"
 
 # Plugins (GitHub Pages only support a few)
 gems:
