@@ -1,0 +1,1 @@
+https://medium.com/dataseries/a-deeper-look-into-gradient-based-learning-for-neural-networks-ad7a35b17b93#dc75-f76963213111

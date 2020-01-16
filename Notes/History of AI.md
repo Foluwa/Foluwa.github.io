@@ -1,0 +1,1 @@
+https://www.linkedin.com/pulse/aiml-time-capsule-from-1987-christian-schiller/

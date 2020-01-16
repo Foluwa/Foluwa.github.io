@@ -1,0 +1,3 @@
+I am an experienced Enterpise Software Engineer and Cloud Infrastruture Architect offering over six solid years of experience in the use of advanced 
+software development methodologies and tools in designing, developing and deploying well-researched, cost-effective, responsive, reactive, secure,
+highly available, scalable and resilient cloud-based software solutions spanning across web, mobile, desktop and blockchain environments.
