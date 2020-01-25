@@ -6,8 +6,8 @@ nav:
   main:
 #    about: "/about"
 #    writing: "/writing"
-    blog: "/blog"
-    projects: "/projects"
+    blog: "/blog/"
+    projects: "/projects/"
   writing:
     all: "/writing"
     popular: "/writing/popular"
