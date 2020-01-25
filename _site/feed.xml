@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Moronfoluwa Akintola</title>
-    <description>The home page of Moronfoluwa Akintola, My name is Moronfoluwa Akintola,   A FullStack Javascript Engineer.  I use ExpressJS, Node and MongoDB. I also have knowledge of Google Cloud. I currently live in Lagos, Nigeria. I have been writing Software for 2+ years professionally. intending to hire? view my resume &amp;quot;</description>    
+    <description>Moronfoluwa Akintola is a software developer with 3+ years’ experience. He seeks to leverage solid skills in artificial intelligence and cross-platform software development. He is passionate about software engineering and community building, this has introduced him to many technical communities like Google Developer Students Clubs and Andela Learning Community.&amp;quot;</description>    
     <link>http://localhost:4000</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
