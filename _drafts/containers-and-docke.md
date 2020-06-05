@@ -1,5 +1,8 @@
 # Intro to Container and docker
 
+quote a developer joke, but it works on my machine
+
+
 ### play-with-docker.com
 
 
