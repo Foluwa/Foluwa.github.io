@@ -7,44 +7,6 @@
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>Introduction to tensors with NumPy</title>
-                
-        
-          <description>In this blog post my aim is to provide a short yet concise summary of what tensors are. 
-</description>
-        
-        <pubDate>Sun, 23 Feb 2020 00:00:00 -0800</pubDate>
-        <link>http://localhost:4000/blog/tensors/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/tensors/</guid>
-      </item>
-    
-      <item>
-        <title>multi-layer-perceptrons-(MLP)</title>
-                
-        
-          <description>&lt;h2 id=&quot;heres-some-common-cases-used-in-programming&quot;&gt;Here’s some common #Cases used in #Programming;&lt;/h2&gt;
-
-</description>
-        
-        <pubDate>Sat, 01 Feb 2020 11:45:00 -0800</pubDate>
-        <link>http://localhost:4000/blog/multi-layer-perceptrons-(MLP)/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/multi-layer-perceptrons-(MLP)/</guid>
-      </item>
-    
-      <item>
-        <title>Cases used in Programming</title>
-                
-        
-          <description>&lt;h2 id=&quot;heres-some-common-cases-used-in-programming&quot;&gt;Here’s some common #Cases used in #Programming;&lt;/h2&gt;
-
-</description>
-        
-        <pubDate>Sun, 01 Dec 2019 11:45:00 -0800</pubDate>
-        <link>http://localhost:4000/blog/common-cases-in-programming/</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/common-cases-in-programming/</guid>
-      </item>
-    
-      <item>
         <title>Introduction to Numpy</title>
                 
         
