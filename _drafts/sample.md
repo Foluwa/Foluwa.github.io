@@ -380,3 +380,46 @@ Startups aren't all about money, but if you don't believe the equity a company
 is offering you will amount to anything, it means that you doubt the 
 company will be successful at all, and you're better off turning down the 
 offer entirely.
+
+
+The idea behind articulate programming languages, such as Avail, is that you can
+define your own custom language&mdash;your own grammar and vocabulary&mdash;that
+is perfectly suited for your problem domain:
+
+<blockquote>
+  In the articulate programming paradigm, a programmer undertakes a project by 
+  developing a domain-appropriate lexicon and phraseology which are leveraged 
+  directly to implement a solution that is readily accessible to domain experts 
+  and software experts alike. Articulate programming is nothing more, and 
+  nothing less, than using the right language and conceptual framework for the 
+  job.
+  <cite><a href="http://www.availlang.org/about-avail/introduction/index.html">Introduction to Avail</a></cite>
+</blockquote>
+
+Some programming languages, such as Lisp, IO, and Ruby, have a flexible syntax
+and support metaprogramming, which allows you to define Domain Specific 
+Languages (DSLs), but articulate programming takes this even further. 
+
+## Program Synthesis
+
+Example languages: [Sketch](https://bitbucket.org/gatoatigrado/sketch-frontend/wiki/Home),
+[Leon](http://lara.epfl.ch/w/leon), [PLINY](http://engineering.rice.edu/darpa/)
+
+## Algebraic Effects
+
+Example languages: [Eff](http://www.eff-lang.org/)
+
+## Semantic Editor / Tangible Programming
+
+Example languages: [Unison](http://unisonweb.org/), [TV](https://wiki.haskell.org/TV) 
+
+## Declarative Reactive / Live Programming
+
+Example Languages: [Kaya](https://vimeo.com/107069470), 
+[Pigment](http://pigment.io/), 
+
+See: http://joelburget.com/plaintext/ and http://research.microsoft.com/en-us/people/smcdirm/liveprogramming.aspx
+
+## Cyberphysical programming
+
+Example languages: [Extempore](http://extempore.moso.com.au/)
