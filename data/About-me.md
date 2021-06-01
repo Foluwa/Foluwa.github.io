@@ -1,0 +1,5 @@
+Moronfoluwa Akintola is a software developer and a trainer with Haptics Nigeria.
+
+He started out as a self-taught software developer in the university, where he also led the Google Developer Student's Club, a community of student developers on campus to build solutions for local problems in a peer-to-peer learning environment. He currently works with Webcoupers consulting agency as a software developer.
+
+He enjoys travelling, public speaking, teaching, and loves to stay informed with the latest technologies. He seeks to leverage solid skills in artificial intelligence and cross-platform software development. He is passionate about software engineering and community building, this has introduced him to many technical communities like Google Developer Students Clubs and Andela Learning Community.

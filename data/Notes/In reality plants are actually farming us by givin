@@ -1,0 +1,68 @@
+In reality plants are actually farming us by giving us oxygen daily untill we eventually decompose so they can consume us...
+
+Word embeddings is the collective term for odels that tend to map a set of words or phrases from a volcabulary to vectors of numerical values, the vectors are called embedings. Usuage in Natural lang Processing
+
+Word embedding is the ability of networks to learn from text and data.
+
+One  Hot Encodding
+
+Architectures for implementing word2vec
+1. CBOW (cONTINUOUS bAG OF words)
+2. Skip-gram
+
+https://video.udacity-data.com/topher/2018/October/5bc56d28_word2vec-mikolov/word2vec-mikolov.pdf
+https://video.udacity-data.com/topher/2018/October/5bc56da8_distributed-representations-mikolov2/distributed-representations-mikolov2.pdf\\\Users/mac/Downloads/Flutter/bin
+
+Adaptive learning rate
+
+#30daysofudacity
+
+Day23 : 18th November
+
+I watched Hyperparameter lesson, learning about different hyperparameters used in defininig and training deep learning models. I also learnt that if you experience training error oscillation you can either decrease your learning rate or use adaptive learning rate.
+
+
+
+Basics of Responsive Web Sites.md
+
+1. Justify your text
+2. Defining the Viewport, the viewport defines the area of the screen that the browser can render content to.
+
+not all pixels are create equal, 
+the broswer reports the width in the number DIP(Device Independent Pixels),
+
+A DIP is a unit of measurement that actually relates pixels to a real distance.
+
+if there are twice as many hardware pixels across as there are pixels reported by the browser, the chromebook pixel mush have a device pixel ratio of two.
+
+so if a browser has a viewport width of 1280 DIPS,
+
+THE 1280DIPS get scaled up to 2560 hardware pixels when the page is rendered on the page.
+
+ISSUE 1: if the page is getting dosplayed on a page with less than half of the pixels(or pexels less than the original intended pixels), the browser will use fon boosting to determine which text/elements are important to display.
+Soo some fonts will be large and easy to read while others will be small and difficult to read and your mobile users will have to pinch and zoom their screen to read the contents
+
+
+To calculate viewport,
+
+width(in px) / DPR(2)
+width(in px) divide DPR(2)
+
+
+why?
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+viewport  => We are referencing the viewport
+
+width=device-width => this allows the page to reflow content to match the screen sizes.
+
+initial-scale=1 => instructs the browser to establish a one to one relationship between device independent pixels and css pixels.
+
+
+without initial-scale=1 some browsers will keep the page width constant when rotating to landscape mode. They also scale the content rather than allowing it to reflow.
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
