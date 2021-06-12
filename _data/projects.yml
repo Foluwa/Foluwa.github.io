@@ -43,5 +43,5 @@
     We offer Nigerian property seekers an easy way to find details of property like homes, houses, lands, shops, office spaces 
     and other commercial properties to buy or rent. Nigeria Property Centre provides a platform for advertising property from 
     organisations and Nigerian private property owners.
-  url: "https://www.welocator.com/"
+  url: "https://welocator.herokuapp.com/"
   image: "welocator-screenshot.png"
