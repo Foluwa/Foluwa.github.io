@@ -14,7 +14,7 @@ modified_time: '2011-08-06T15:10:36.793-07:00'
 
 ### The Genesis
 
-My name is Moronfoluwa Akintola, A Software Engineer. This is my first post here.
+My name is Moronfoluwa Akintola, a Software Engineer. This is my first post here.
 
 ### My Software development story
 Life comes at you fast,  Software development was a hobby that turned into a profession. Back in 2011/2012, I had access to my mom's computer and it has Encarta and GTA vice city installed. Each moment I browse the screen, I question myself on how I can build such software. The first time I typed a line of code was sometime in 2013/2014 when the computer studies teacher introduced us to Pascal. Most of what was explained went over my head, but deep down I always knew this is where my passion lies.

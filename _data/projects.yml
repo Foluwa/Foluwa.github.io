@@ -1,3 +1,33 @@
+- name: "Maidoki ride sharing app"
+  date: "2021"
+  description: |
+   Maidoki is a mobile application with Flutter that will help users request a transportation option that will safely transport them to their destination.
+  url: "https://play.google.com/store/apps/details?id=com.maidoki.rider"
+  image: "welocator-screenshot.png"
+- name: "Loan app user interface with Flutter"
+  date: "2021"
+  description: |
+   Users can perform basic operations on  account such as updating his personal information, get portfolio value, retrieve payment schedule over multiple loan period.
+  url: "https://github.com/Foluwa/lonner"
+  image: "welocator-screenshot.png"
+- name: "Frontend Mentor: React REST Countries API Challenge"
+  date: "2021"
+  description: |
+   I implemented the REST Countries API to pull country data and display using a design as interface guide.
+  url: "https://thirsty-joliot-3773dd.netlify.app/"
+  image: "welocator-screenshot.png"
+- name: "Taniasfoods"
+  date: "2021"
+  description: |
+   Indigenous foods ordering system to take free unlimited online in Dubai.
+  url: "https://taniasfoods.com/"
+  image: "welocator-screenshot.png"
+- name: "Predicting Bike Sharing Data"
+  date: "2019"
+  description: |
+    I built a neural network from scratch to carry out a prediction problem on UCI Machine Learning Database, by building a neural network.
+  url: "https://github.com/Foluwa/Predicting-Bike-Sharing-Data-"
+  image: "welocator-screenshot.png"
 - name: "Whogobuyam"
   date: "2019"
   description: |
