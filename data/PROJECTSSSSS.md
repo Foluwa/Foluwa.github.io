@@ -17,6 +17,11 @@ https://pytorch.org/tutorials/beginner/basics/intro.html
 
 CHOROPLETH MAPS
 
+https://ourworldindata.org/grapher/share-of-population-infected-with-hiv-ihme?stackMode=absolute&region=Oceania
+https://ourworldindata.org/hiv-aids
+
+
+
 https://datamaps.world/
 
 https://twitter.com/datamapsworld
