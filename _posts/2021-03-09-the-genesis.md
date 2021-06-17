@@ -6,7 +6,6 @@ author: Moronfoluwa Akintola
 tags:
 - Introduction 
 - Getting Started 
-- Machine Learning
 thumbnail_path: blog/getting-started.jpeg
 modified_time: '2011-08-06T15:10:36.793-07:00'
 ---
